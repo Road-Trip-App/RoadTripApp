@@ -28,6 +28,11 @@ const MapContainer = (props) => {
         zoom={13}
         center={currentPosition}
       />
+      <LocationPin
+          lat={location.lat}
+          lng={location.lng}
+          text={location.address}
+        />
       
     </LoadScript>
   );
