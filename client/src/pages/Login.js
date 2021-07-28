@@ -14,11 +14,12 @@ const Login = (props) => {
     const { name, value } = event.target;
 
     setFormState({
+      
       ...formState,
       [name]: value,
+    
     });
   };
-
   // submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
