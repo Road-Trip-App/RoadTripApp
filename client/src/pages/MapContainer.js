@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 
+
 const MapContainer = (props) => {
   const mapStyles = {
     height: "75vh",
@@ -28,6 +29,7 @@ const MapContainer = (props) => {
         zoom={13}
         center={currentPosition}
       />
+
       
     </LoadScript>
   );
