@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import Api from '../utils/API';
 // import Marker from '@material-ui/icons/LocationOnOutlined'
 
 
@@ -27,7 +28,14 @@ const MapContainer = (props) => {
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(success);
   });
+
+  const getDirections = () => {
+    Api.getDirections().then((data) => console.log('LOOK', data))
+  }
+  //Api.getDirections().then((data) => console.log('LOOK', data))
+
   return (
+    <>
     <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
       <GoogleMap
         mapContainerStyle={mapStyles}
@@ -39,7 +47,7 @@ const MapContainer = (props) => {
         className=""
         onClick={() =>
           window.open(
-            "https://maps.google.com?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyCSJOPWqDbtmik2Bzu9gN0D59r9WFo7nBo"
+            "https://maps.google.com?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}"
           
           )
         }
@@ -54,6 +62,13 @@ const MapContainer = (props) => {
 
 <a href="http://maps.google.com/?q=100 Montreal rd, Ottawa">Go no</a>
     </LoadScript>
+    <button
+      onClick={getDirections}
+    >
+      YO
+    </button>
+
+    </>
   );
 };
 
