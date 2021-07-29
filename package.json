@@ -17,20 +17,14 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
-<<<<<<< HEAD
     "bootstrap": "^5.0.2",
     "express": "^4.17.1",
     "google-maps-react": "^2.0.6",
     "graphql": "^15.5.1",
-    "react-bootstrap": "^2.0.0-beta.4"
-=======
+    "react-bootstrap": "^2.0.0-beta.4",
     "@react-google-maps/api": "^2.2.0",
     "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "google-maps-react": "^2.0.6",
-    "graphql": "^15.5.1",
     "react-google-maps": "^9.4.5",
     "react-places-autocomplete": "^7.3.0"
->>>>>>> 87faf49f66828b8ef1dbdc51f643a3b90828bc28
   }
 }
