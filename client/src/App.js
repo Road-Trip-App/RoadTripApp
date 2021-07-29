@@ -15,6 +15,7 @@ import Footer from './components/Footer';
 // import MapContainer from './pages/MapContainer';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import MapContainer from './pages/MapContainer';
 
 
 
@@ -48,6 +49,7 @@ function App() {
           <Header />
           <div className="container">
             <Route exact path="/">
+              <MapContainer/>
               <Home />
             </Route>
             <Route exact path="/login">
@@ -56,6 +58,7 @@ function App() {
             <Route exact path="/signup">
               <Signup />
             </Route>
+            
             
           </div>
           <Footer />
