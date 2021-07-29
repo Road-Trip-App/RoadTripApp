@@ -19,3 +19,6 @@ const roadTripSchema = new Schema({
 const RoadTrip = model("RoadTrip", roadTripSchema);
 
 module.exports = RoadTrip;
+
+
+

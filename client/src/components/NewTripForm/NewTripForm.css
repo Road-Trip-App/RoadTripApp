@@ -1,0 +1,32 @@
+.btn-danger {
+    display: flex;
+    justify-content: center;
+    box-shadow: 4px 4px 6px;
+    color: #cbd3e0;
+}
+
+.input-group-text{
+    text-align: center;
+    color: rgb(30, 16, 95);
+    text-shadow: 4px 4px 6px;
+    color: #4b5063;
+}
+
+.newform-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #ddd4d4;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    box-shadow: 2px 2px 6px #000000;
+    border-radius: 7px;
+    padding: 22px;
+    width: 90%;
+    margin-left: 100px;
+    margin-top: 50px;
+    
+}
+
