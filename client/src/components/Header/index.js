@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Auth from '../../utils/auth';
+import "./header.css"
 
 const Header = () => {
   const logout = (event) => {
@@ -9,13 +10,13 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
-      <div className="container flex-row justify-space-between-lg justify-center align-center">
+    <header className="bg-primary text-light mb-4 py-3 flex-row align-center header background-colour">
+      <div className="container flex-row justify-space-between-lg justify-center align-center background-colour">
         <div>
           <Link className="text-light" to="/">
-            <h1 className="m-0">Road Trip-In</h1>
+            <h1 className="m-0">RoadTripPin</h1>
           </Link>
-          <p className="m-0">Get into the mind of a programmer.</p>
+          <p className="m-0">Don't miss even one stop!</p>
         </div>
         <div>
           {Auth.loggedIn() ? (

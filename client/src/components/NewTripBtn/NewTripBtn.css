@@ -1,0 +1,13 @@
+.startBtn{
+  background-color: forestgreen;
+  width:100%;
+}
+
+.startBtn:hover{
+  background-color: rgb(25, 95, 25);
+
+}
+
+.background{
+ background-color: rgb(70, 70, 70);
+}

@@ -3,6 +3,7 @@
     justify-content: center;
     box-shadow: 4px 4px 6px;
     color: #cbd3e0;
+    border-radius: 55px;
 }
 
 .input-group-text{
@@ -18,9 +19,9 @@
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #ddd4d4;
+    background-color: rgb(70, 70, 70);
     background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.125);
+    border: 55px solid rgba(0, 0, 0, 0.125);
     box-shadow: 2px 2px 6px #000000;
     border-radius: 7px;
     padding: 22px;
