@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import "./WaypointForm.css";
 
 export default function WayPointForm() {
     const [stopName, setStopName] = useState('');
@@ -49,7 +49,7 @@ export default function WayPointForm() {
     }
 
     return (
-        <div>
+        <div className="waypointstyle ">
             <form>
             <input
             value={stopName}
@@ -57,6 +57,7 @@ export default function WayPointForm() {
             onChange={handleFormChange}
             type="text"
             placeholder="Stop Name"
+    
             />
             {/* not sure but depending on what data the api has we may not 
             need this field */}
@@ -65,7 +66,7 @@ export default function WayPointForm() {
             name="location"
             onChange={handleFormChange}
             type="text"
-            placeholder="Address?"
+            placeholder="Address"
             />
             {/* Might switch duration to a drop down */}
             <input
