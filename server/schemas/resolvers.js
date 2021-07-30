@@ -49,6 +49,20 @@ const resolvers = {
 
       return { token, user };
     },
+
+  addTrip: async (parent, { RoadTrip }, context) => {
+    if (context.user) {
+        console.log(context.user)
+        // this looks good too
+        const updatedTripData = await User.findByIdAndUpdate(
+            { _id: context.user._id },
+            { $push: { savedTrips: RoadTrip } }, 
+            { new: true }
+        );
+        return updatedRoadTrip
+    }
+    throw new AuthenticationError('Please Log in to save a trip')
+}
   },
 };
 
