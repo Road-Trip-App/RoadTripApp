@@ -4,37 +4,37 @@ import "./NewTripForm.css";
 const NewTripForm = () => {
   return (
     <div>
-      <div class="NewTripForm">
+      <div className="NewTripForm">
         <div className="newform-container">
-          <div class="input-group1 input-group-lg">
-            <span class="input-group-text" id="inputGroup-sizing-lg">
+          <div className="input-group1 input-group-lg">
+            <span className="input-group-text" id="inputGroup-sizing-lg">
               ORIGIN LOCATION
             </span>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-lg"
             />
           </div>
 
-          <div class="input-group2 input-group-lg">
-            <span class="input-group-text" id="inputGroup-sizing-lg">
+          <div className="input-group2 input-group-lg">
+            <span className="input-group-text" id="inputGroup-sizing-lg">
               DESTINATION
             </span>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-lg"
             />
           </div>
 
-          <div class="input-group3 mb-3">
-            <label class="input-group-text2" for="TILE PHOTO">
+          <div className="input-group3 mb-3">
+            <label className="input-group-text2" for="TILE PHOTO">
               TILE PHOTO
             </label>
-            <select class="form-select" name="tile-photo" id="tile-photo">
+            <select className="form-select" name="tile-photo" id="tile-photo">
               <option selected>Choose file</option>
               <option value="photo1">Mountains</option>
               <option value="photo2">Lake</option>
@@ -45,9 +45,9 @@ const NewTripForm = () => {
             </select>
           </div>
 
-          <div class="input-group mb-3">
+          <div className="input-group mb-3">
 
-            <button class="btn btn-danger btn-block" type="addstop">
+            <button className="btn btn-danger btn-block" type="addstop">
               ADD A PIT STOP
             </button>
           </div>
