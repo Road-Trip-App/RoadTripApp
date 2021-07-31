@@ -1,0 +1,23 @@
+.btn-danger {
+    display: flex;
+    justify-content: center;
+    box-shadow: 4px 4px 6px;
+    color: #cbd3e0;
+}
+
+.edit-btn{
+background-color: rgb(68, 0, 255);
+}
+
+.go-btn{
+    background-color: rgb(13, 153, 32);
+    border-color: darkslategray;
+    }
+
+.waypointstyle{
+    background-color: rgb(70, 70, 70);
+    border-radius: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

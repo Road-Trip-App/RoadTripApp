@@ -57,9 +57,14 @@ function App() {
             <Route exact path="/signup">
               <Signup />
             </Route>
-            
-            
-          </div>
+            <Route exact path="/new-trip">
+              <NewTrip />
+            </Route>
+            {/* silly test path */}
+            <Route exact path="/banana">
+              <h1>BANANA YAAAAAAAY</h1>
+            </Route>
+            </div>
           <Footer />
         </div>
       </Router>
