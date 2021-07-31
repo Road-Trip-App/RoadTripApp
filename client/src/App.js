@@ -16,6 +16,7 @@ import Footer from './components/Footer';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import MapContainer from './pages/MapContainer';
+import NewTripBtn from './components/NewTripBtn/NewTripBtn';
 
 
 
@@ -50,6 +51,7 @@ function App() {
           <div className="container">
             <Route exact path="/">
               <MapContainer/>
+              <NewTripBtn />
               <Home />
             </Route>
             <Route exact path="/login">
