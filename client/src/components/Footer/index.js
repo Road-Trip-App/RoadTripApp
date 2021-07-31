@@ -15,9 +15,6 @@ const Footer = () => {
             &larr; Go Back
           </button>
         )}
-<<<<<<< HEAD
-        
-=======
         <h4>
           Made with{' '}
           <span
@@ -30,7 +27,6 @@ const Footer = () => {
           </span>{' '}
           by the kids of bootcamp.
         </h4>
->>>>>>> 06ac159ae5d6eb332e2d5b503aea6754a43f85b1
       </div>
     </footer>
   );
