@@ -2,6 +2,8 @@ import React from 'react';
 import Card from 'react-bootstrap/card';
 import Button from 'react-bootstrap/button';
 import "./NewTripBtn.css"
+import { Link } from 'react-router-dom';
+import NewTripForm from '../NewTripForm/NewTripForm';
 
 export function NewTripBtn() {
   return (
@@ -9,6 +11,10 @@ export function NewTripBtn() {
 <Card className="d-flex justify-content-center bg-info">
   <Card.Body className=".bg-info">
     <Button className="startBtn"variant="primary">START A NEW TRIP!</Button>
+
+    <Link to="/banana">
+    <Button onclick={NewTripForm} variant="primary">Go somewhere</Button>
+              </Link>
   </Card.Body>
 </Card>
 </div>

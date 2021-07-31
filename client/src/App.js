@@ -12,11 +12,12 @@ import Home from './pages/Home';
 import Header from './components/Header';
 import NewTrip from './components/TripCard/TripCard';
 import Footer from './components/Footer';
-// import MapContainer from './pages/MapContainer';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import MapContainer from './pages/MapContainer';
 import NewTripBtn from './components/NewTripBtn/NewTripBtn';
+import NewTripForm from './components/NewTripForm/NewTripForm';
+
 
 
 
@@ -49,9 +50,9 @@ function App() {
           <Header />
           <div className="container">
             <Route exact path="/">
-              <MapContainer className="flex-column justify-flex-start min-1200-vh w-full bg-blue"/>
+              <MapContainer/>
               <NewTripBtn />
-              <Home  />
+              <Home />
             </Route>
             <Route exact path="/login">
               <Login />
@@ -65,6 +66,9 @@ function App() {
             {/* silly test path */}
             <Route exact path="/banana">
               <h1>BANANA YAAAAAAAY</h1>
+            </Route>
+            <Route exact path="/new-trip-form">
+              <NewTripForm />
             </Route>
             </div>
           <Footer />
