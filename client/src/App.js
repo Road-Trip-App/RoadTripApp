@@ -17,6 +17,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import MapContainer from './pages/MapContainer';
 import NewTripBtn from './components/NewTripBtn/NewTripBtn';
+import NewTripForm from './components/NewTripForm/NewTripForm';
 
 
 
@@ -66,6 +67,9 @@ function App() {
             {/* silly test path */}
             <Route exact path="/banana">
               <h1>BANANA YAAAAAAAY</h1>
+            </Route>
+            <Route exact path="/new-trip-form">
+              <NewTripForm />
             </Route>
             </div>
           <Footer />
