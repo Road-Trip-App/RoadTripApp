@@ -9,10 +9,7 @@ import NewTripBtn from '../components/NewTripBtn/NewTripBtn';
 const Home = () => {
   return (
     <div >
-      <NewTripBtn />
-      <NewTripForm />
-      <TripCard />
-      <WaypointForm />
+      
     </div>
   )
 }

@@ -13,6 +13,9 @@ export function NewTrip() {
     <Card.Text>
       LOOK A TRIP
     </Card.Text>
+    <Link to="/banana">
+    <Button variant="primary">Go somewhere</Button>
+              </Link>
     <Button className="go-btn" variant="primary">GO!</Button>
     <Button className="edit-btn"variant="primary">EDIT</Button>
   </Card.Body>

@@ -90,7 +90,7 @@ import {
       <AnyReactComponent
             lat={43.6532}
             lng={79.3832}
-            text="My Marker"
+            text=""
           />
 
 <a href="http://maps.google.com/?q=100 Montreal rd, Ottawa">Go no</a>
