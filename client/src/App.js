@@ -12,7 +12,6 @@ import Home from './pages/Home';
 import Header from './components/Header';
 import NewTrip from './components/TripCard/TripCard';
 import Footer from './components/Footer';
-// import MapContainer from './pages/MapContainer';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import MapContainer from './pages/MapContainer';
