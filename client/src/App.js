@@ -16,7 +16,7 @@ import Footer from './components/Footer';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import MapContainer from './pages/MapContainer';
-
+import NewTripBtn from './components/NewTripBtn/NewTripBtn';
 
 
 
@@ -45,12 +45,13 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
+        <div className="flex-column justify-flex-start min-1200-vh w-full bg-blue">
           <Header />
           <div className="container">
             <Route exact path="/">
-              <MapContainer/>
-              <Home />
+              <MapContainer className="flex-column justify-flex-start min-1200-vh w-full bg-blue"/>
+              <NewTripBtn />
+              <Home  />
             </Route>
             <Route exact path="/login">
               <Login />
@@ -58,7 +59,7 @@ function App() {
             <Route exact path="/signup">
               <Signup />
             </Route>
-            <Route exact path="/new-trip">
+            <Route  exact path="/new-trip">
               <NewTrip />
             </Route>
             {/* silly test path */}

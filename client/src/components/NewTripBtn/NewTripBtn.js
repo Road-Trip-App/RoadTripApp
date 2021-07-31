@@ -5,11 +5,13 @@ import "./NewTripBtn.css"
 
 export function NewTripBtn() {
   return (
-<Card className="text-center background">
-  <Card.Body>
+  <div className=".bg-info">
+<Card className="d-flex justify-content-center bg-info">
+  <Card.Body className=".bg-info">
     <Button className="startBtn"variant="primary">START A NEW TRIP!</Button>
   </Card.Body>
 </Card>
+</div>
 
 );
 }
