@@ -1,75 +1,65 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-import Api from '../utils/API';
+import {
+  withGoogleMap,
+  withScriptjs,
+  GoogleMap,
+  Marker,
+} from "react-google-maps";
+
+import usePlacesAutocomplete, {
+  getGeocode,
+  getLatLng,
+} from "use-places-autocomplete";
+
+const libraries = ["places"];
+
+//import usePlacesAutocomplete, {getGeocode, getLatLng,} from "use-places-autocomplete";
+
 // import Marker from '@material-ui/icons/LocationOnOutlined'
+// const MapContainer = (props) => {
+//   const AnyReactComponent = ({text}: any) => <div>{text}</div>;
+//   const mapStyles = {
+//     height: "25vh",
+//     width: "100%",
+//   };
+
+  // useEffect(() => {
+  //   navigator.geolocation.getCurrentPosition(success);
+  // });
 
 
 
-
-const MapContainer = (props) => {
-
-  const AnyReactComponent = ({text}: any) => <div>{text}</div>;
-  const mapStyles = {
-    height: "25vh",
-    width: "100%",
-  };
-
-  const [currentPosition, setCurrentPosition] = useState({});
-
-  const success = (position) => {
-    const currentPosition = {
-      lat: position.coords.latitude,
-      lng: position.coords.longitude,
-    };
-    setCurrentPosition(currentPosition);
-  };
-
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition(success);
-  });
-
-  const getDirections = () => {
-    Api.getDirections().then((data) => console.log('LOOK', data))
-  }
-  //Api.getDirections().then((data) => console.log('LOOK', data))
-
-  return (
-    <>
-    <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
+  function Map(props) {
+  
+  
+    return (
       <GoogleMap
-        mapContainerStyle={mapStyles}
-        zoom={13}
-        center={currentPosition}
-      />
-
-      <div
-        className=""
-        onClick={() =>
-          window.open(
-            "https://maps.google.com?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}"
-          
-          )
-        }
+        defaultZoom={12}
+        defaultCenter={{ lat: 45.4230016, lng: -75.6312533 }}
+        //defaultOptions={{ styles: mapStyles }}
       >
-        <i className=""></i> Go{" "}
-      </div>
-      <AnyReactComponent
-            lat={43.6532}
-            lng={79.3832}
-            text=""
-          />
+        <Marker lat={45.4230016} lng={-75.6312533} icon={{url:"http://chart.apis.google.com/chart?chst=d_map_pin_shadow"}}/>
+      </GoogleMap>
+    );
+  }
+ 
 
-<a href="http://maps.google.com/?q=100 Montreal rd, Ottawa">Go no</a>
-    </LoadScript>
-    <button
-      onClick={getDirections}
-    >
-      YO
-    </button>
+  
+  const MapWrapped = withScriptjs(withGoogleMap(Map));
 
-    </>
+
+ export default function App() {
+  return (
+    <div style={{ width: "80vw", height: "80vh" }}>
+      <MapWrapped
+        googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${
+          process.env.REACT_APP_GOOGLE_MAPS_API_KEY
+        }`}
+        loadingElement={<div style={{ height: `100%` }} />}
+        containerElement={<div style={{ height: `100%` }} />}
+        mapElement={<div style={{ height: `100%` }} />}
+      />
+    </div>
   );
-};
-
-export default MapContainer;
+}
