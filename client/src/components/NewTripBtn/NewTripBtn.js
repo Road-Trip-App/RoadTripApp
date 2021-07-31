@@ -3,22 +3,17 @@ import Card from 'react-bootstrap/card';
 import Button from 'react-bootstrap/button';
 import "./NewTripBtn.css"
 import { Link } from 'react-router-dom';
-import NewTripForm from '../NewTripForm/NewTripForm';
+import NewTripForm  from '../NewTripForm/NewTripForm';
 
 export function NewTripBtn() {
   return (
-  <div className=".bg-info">
-<Card className="d-flex justify-content-center bg-info">
+  <Card className="d-flex justify-content-center bg-info">
   <Card.Body className=".bg-info">
-    <Button className="startBtn"variant="primary">START A NEW TRIP!</Button>
-
-    <Link to="/banana">
-    <Button onclick={NewTripForm} variant="primary">Go somewhere</Button>
-              </Link>
+    <Link to="/new-trip">
+    <Button  onclick={NewTripForm} className="startBtn" variant="primary">START A NEW TRIP!</Button>
+    </Link>
   </Card.Body>
 </Card>
-</div>
-
 );
 }
 

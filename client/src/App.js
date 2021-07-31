@@ -8,7 +8,7 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-import Home from './pages/Home';
+
 import Header from './components/Header';
 import NewTrip from './components/TripCard/TripCard';
 import Footer from './components/Footer';
@@ -17,6 +17,7 @@ import Signup from './pages/Signup';
 import MapContainer from './pages/MapContainer';
 import NewTripBtn from './components/NewTripBtn/NewTripBtn';
 import NewTripForm from './components/NewTripForm/NewTripForm';
+import WayPointForm from './components/WaypointForm/WaypointForm';
 
 
 
@@ -46,13 +47,12 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="flex-column justify-flex-start min-1200-vh w-full bg-blue">
+        <div className="flex-column justify-flex-start min-400-vh w-full bg-blue">
           <Header />
           <div className="container">
             <Route exact path="/">
               <MapContainer/>
               <NewTripBtn />
-              <Home />
             </Route>
             <Route exact path="/login">
               <Login />
@@ -65,10 +65,10 @@ function App() {
             </Route>
             {/* silly test path */}
             <Route exact path="/banana">
-              <h1>BANANA YAAAAAAAY</h1>
+              <NewTripForm/>
             </Route>
-            <Route exact path="/new-trip-form">
-              <NewTripForm />
+            <Route exact path="/way-point">
+              <WayPointForm />
             </Route>
             </div>
           <Footer />

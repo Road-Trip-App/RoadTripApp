@@ -7,12 +7,12 @@ import {
   Marker,
 } from "react-google-maps";
 
-import usePlacesAutocomplete, {
-  getGeocode,
-  getLatLng,
-} from "use-places-autocomplete";
+// import usePlacesAutocomplete, {
+//   getGeocode,
+//   getLatLng,
+// } from "use-places-autocomplete";
 
-const libraries = ["places"];
+// const libraries = ["places"];
 
 //import usePlacesAutocomplete, {getGeocode, getLatLng,} from "use-places-autocomplete";
 

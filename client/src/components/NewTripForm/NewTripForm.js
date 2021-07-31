@@ -1,5 +1,7 @@
 import React from "react";
 import "./NewTripForm.css";
+import {Link} from 'react-router-dom'
+import WayPointForm from "../WaypointForm/WaypointForm";
 
 const NewTripForm = () => {
   return (
@@ -46,10 +48,13 @@ const NewTripForm = () => {
           </div>
 
           <div className="input-group mb-3">
-
-            <button className="btn btn-danger btn-block" type="addstop">
+            <Link to="/way-point">
+            <button onClick={WayPointForm} className="btn btn-danger btn-block" type="addstop">
               ADD A PIT STOP
             </button>
+            </Link>
+
+
           </div>
         </div>
       </div>
