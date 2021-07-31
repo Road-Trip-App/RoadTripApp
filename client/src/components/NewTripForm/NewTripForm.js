@@ -8,32 +8,32 @@ const NewTripForm = () => {
     <div>
       <div className="NewTripForm">
         <div className="newform-container">
-          <div className="input-group1 input-group-lg">
-            <span className="input-group-text" id="inputGroup-sizing-lg">
+          <div className="input-group1">
+            <span className="input-group-text" id="inputGroup">
               ORIGIN LOCATION
             </span>
             <input
               type="text"
               className="form-control"
               aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-lg"
+              aria-describedby="inputGroup mb-3"
             />
           </div>
 
-          <div className="input-group2 input-group-lg">
-            <span className="input-group-text" id="inputGroup-sizing-lg">
+          <div className="input-group2">
+            <span className="input-group-text" id="inputGroup">
               DESTINATION
             </span>
             <input
               type="text"
               className="form-control"
               aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-lg"
+              aria-describedby="inputGroup mb-3"
             />
           </div>
 
           <div className="input-group3 mb-3">
-            <label className="input-group-text2" for="TILE PHOTO">
+            <label className="input-group-text2" htmlfor="TILE PHOTO">
               TILE PHOTO
             </label>
             <select className="form-select" name="tile-photo" id="tile-photo">
@@ -49,8 +49,8 @@ const NewTripForm = () => {
 
           <div className="input-group mb-3">
             <Link to="/way-point">
-            <button onClick={WayPointForm} className="btn btn-danger btn-block" type="addstop">
-              ADD A PIT STOP
+            <button onClick={WayPointForm} className="btn btn-primary btn-block" type="addstop">
+              Add A Pit Stop
             </button>
             </Link>
 

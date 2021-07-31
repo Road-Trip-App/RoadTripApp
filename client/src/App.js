@@ -51,7 +51,7 @@ function App() {
           <Header />
           <div className="container">
             <Route exact path="/">
-              <MapContainer/>
+              {/* <MapContainer/> */}
               <NewTripBtn />
             </Route>
             <Route exact path="/login">
