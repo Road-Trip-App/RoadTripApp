@@ -24,7 +24,7 @@ export function NewTrip() {
         </Card.Body>
         <Card.Footer className="text-muted">Approx 14 hours</Card.Footer>
       </Card>
-
+{/* 
       <Card className="text-center btnstyle">
         <Card.Header> 2- From ORIGIN to DESTINATION</Card.Header>
         <Card.Body>
@@ -59,7 +59,7 @@ export function NewTrip() {
           </Link>
         </Card.Body>
         <Card.Footer className="text-muted">Approx 14 hours</Card.Footer>
-      </Card>
+      </Card> */}
     </>
   );
 }

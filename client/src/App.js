@@ -18,12 +18,9 @@ import MapContainer from './pages/MapContainer';
 import NewTripBtn from './components/NewTripBtn/NewTripBtn';
 import NewTripForm from './components/NewTripForm/NewTripForm';
 import WayPointForm from './components/WaypointForm/WaypointForm';
-import SingleTripView from './components/SingleTripView/SingleTripView.js';
-
-
-
-
-
+import SingleTripView from './components/SingleTripView/SingleTripView';
+import NewPinBtn from './components/NewPinBtn/NewPinBtn';
+import TripCard from './components/TripCard/TripCard'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -37,7 +34,7 @@ const authLink = setContext((_, { headers }) => {
       authorization: token ? `Bearer ${token}` : '',
     },
   };
-});           
+});
 
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
@@ -54,31 +51,39 @@ function App() {
             <Route exact path="/">
               <NewTripBtn />
             </Route>
+
             <Route exact path="/dashboard">
               <NewTripBtn />
+              <TripCard />
+              <NewPinBtn />
             </Route>
-            <NewTrip />
+
             <Route exact path="/login">
               <Login />
             </Route>
+
+
             <Route exact path="/signup">
               <Signup />
             </Route>
-            <Route  exact path="/new-trip">
+
+            
+            <Route exact path="/new-trip">
               <NewTrip />
             </Route>
-            <Route  exact path="/SingleTripView">
-            <MapContainer/>
-              <SingleTripView />
+            <Route exact path="/SingleTripView">
+              <MapContainer />
+              <NewPinBtn />
+
             </Route>
             {/* silly test path */}
             <Route exact path="/banana">
-              <NewTripForm/>
+              <NewTripForm />
             </Route>
             <Route exact path="/way-point">
               <WayPointForm />
             </Route>
-            </div>
+          </div>
           <Footer />
         </div>
       </Router>
