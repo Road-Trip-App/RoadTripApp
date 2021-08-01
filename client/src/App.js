@@ -54,6 +54,9 @@ function App() {
             <Route exact path="/">
               <NewTripBtn />
             </Route>
+            <Route exact path="/dashboard">
+              <NewTripBtn />
+            </Route>
             <NewTrip />
             <Route exact path="/login">
               <Login />
