@@ -56,7 +56,7 @@ export default function WayPointForm() {
             name="stopName"
             onChange={handleFormChange}
             type="text"
-            placeholder="Stop Name"
+            placeholder="Pin Name"
     
             />
             {/* not sure but depending on what data the api has we may not 
@@ -81,7 +81,7 @@ export default function WayPointForm() {
             name="comment"
             onChange={handleFormChange}
             type="text"
-            placeholder="Add more information like restrooms or parking availability"
+            placeholder="Add more information such as restrooms or parking availability"
             />
             {error && (
                 <p>{error}</p>
