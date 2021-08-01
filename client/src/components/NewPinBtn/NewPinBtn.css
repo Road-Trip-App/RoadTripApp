@@ -1,0 +1,13 @@
+.NewPinBtn{
+  background-color: rgb(170, 77, 0);
+  width:100%;
+}
+
+.NewPinBtn:hover{
+  background-color: rgb(170, 77, 25);
+
+}
+
+.background{
+ background-color: rgb(70, 70, 70);
+}

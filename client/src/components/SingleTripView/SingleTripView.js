@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/card';
 import Button from 'react-bootstrap/button';
 import { Link } from 'react-router-dom';
 
-export function GoTrip() {
+export function SingleTripView() {
     return (
         <>
             <Card className="text-center btnstyle">
@@ -13,7 +13,7 @@ export function GoTrip() {
                     <Card.Text>
                         LOOK A TRIP
                     </Card.Text>
-                    {/* <Link to="/banana"> */}
+                    {/* <Link to="/"> */}
                     <Button className="go-btn" variant="primary">Go!</Button>
 
                     {/* </Link> */}
@@ -43,4 +43,4 @@ export function GoTrip() {
     );
 }
 
-export default GoTrip;
+export default SingleTripView;
