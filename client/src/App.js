@@ -18,7 +18,7 @@ import MapContainer from './pages/MapContainer';
 import NewTripBtn from './components/NewTripBtn/NewTripBtn';
 import NewTripForm from './components/NewTripForm/NewTripForm';
 import WayPointForm from './components/WaypointForm/WaypointForm';
-// import ExistingTrip from './components/ExistingPins/ExistingPins';
+import SingleTripView from './components/SingleTripView/SingleTripView.js';
 
 
 
@@ -52,9 +52,9 @@ function App() {
           <Header />
           <div className="container">
             <Route exact path="/">
-              <MapContainer/>
               <NewTripBtn />
             </Route>
+            <NewTrip />
             <Route exact path="/login">
               <Login />
             </Route>
@@ -64,9 +64,10 @@ function App() {
             <Route  exact path="/new-trip">
               <NewTrip />
             </Route>
-            {/* <Route  exact path="/existing-pins">
-              <NewTrip />
-            </Route> */}
+            <Route  exact path="/SingleTripView">
+            <MapContainer/>
+              <SingleTripView />
+            </Route>
             {/* silly test path */}
             <Route exact path="/banana">
               <NewTripForm/>
