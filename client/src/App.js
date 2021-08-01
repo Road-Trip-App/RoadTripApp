@@ -13,6 +13,8 @@ import Header from './components/Header';
 import NewTrip from './components/TripCard/TripCard';
 import Footer from './components/Footer';
 import Login from './pages/Login';
+import Home from './pages/Home';
+import Dashboard from './pages/Dashboard';
 import Signup from './pages/Signup';
 import MapContainer from './pages/MapContainer';
 import NewTripBtn from './components/NewTripBtn/NewTripBtn';
@@ -49,13 +51,11 @@ function App() {
           <Header />
           <div className="container">
             <Route exact path="/">
-              <NewTripBtn />
+              <Home />
             </Route>
 
             <Route exact path="/dashboard">
-              <NewTripBtn />
-              <TripCard />
-              <NewPinBtn />
+              <Dashboard />
             </Route>
 
             <Route exact path="/login">
