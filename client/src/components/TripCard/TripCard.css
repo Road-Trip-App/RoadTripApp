@@ -7,14 +7,19 @@
 
 .edit-btn{
 background-color: rgb(68, 0, 255);
+border-radius: 50px;
 }
 
 .go-btn{
     background-color: rgb(13, 153, 32);
     border-color: darkslategray;
+    border-radius: 50px;
     }
 
 .btnstyle{
-    background-color: rgb(70, 70, 70);
-    border-radius: 55px;
+    background-color: rgb(192, 189, 189);
+    border-radius: 50px;
+    margin-top: 10px;
 }
+
+
