@@ -1,3 +1,4 @@
+import { ChangeEvent } from "react";
 import usePlacesAutocomplete, {
     getGeocode,
     getLatLng,
@@ -10,22 +11,27 @@ import usePlacesAutocomplete, {
     ComboboxList,
     ComboboxOption,
   } from "@reach/combobox";
+
+  import "@reach/combobox/styles.css";
+  //import "./styles.scss";
   
  // const libraries = ["places"];
   
-  function Search({ panTo }) {
+  function Search() {
     const {
       ready,
       value,
       suggestions: { status, data },
       setValue,
-      clearSuggestions,
-    } = usePlacesAutocomplete({
-      requestOptions: {
-        location: { lat: () => 45.4230016, lng: () => -75.6312533 },
-        radius: 200 * 1000,
-      },
-    });
+      //clearSuggestions,
+    } = usePlacesAutocomplete(
+    //     {
+    //   requestOptions: {
+    //     location: { lat: () => 45.4230016, lng: () => -75.6312533 },
+    //     radius: 200 * 1000,
+    //   },
+    // }
+    );
   
   
   
@@ -35,17 +41,34 @@ import usePlacesAutocomplete, {
   
     const handleSelect = async (address) => {
       setValue(address, false);
-      clearSuggestions();
   
-      try {
-        const results = await getGeocode({ address });
-        const { lat, lng } = await getLatLng(results[0]);
+    //   try {
+    //     const results = await getGeocode({ address });
+    //     const { lat, lng } = await getLatLng(results[0]);
   
-      panTo({ lat, lng });
-      } catch (error) {
-        console.log("😱 Error: ", error);
-      }
+    //   panTo({ lat, lng });
+    //   } catch (error) {
+    //     console.log("😱 Error: ", error);
+    //   }
     };
+
+
+    const renderSuggestions = (): JSX.Element => {
+        const suggestions = data.map(({ place_id, description }: any) => (
+          <ComboboxOption key={place_id} value={description} />
+        ));
+        return (
+            <>
+              {suggestions}
+              <li className="logo">
+                <img
+                  src="https://developers.google.com/maps/documentation/images/powered_by_google_on_white.png"
+                  alt="Powered by Google"
+                />
+              </li>
+            </>
+          );
+        };
   
     return (
       <div className="search">
@@ -58,11 +81,7 @@ import usePlacesAutocomplete, {
           />
           <ComboboxPopover>
             <ComboboxList>
-              {status === "OK" &&
-                data.map(({ id, description }) => (
-                  <ComboboxOption key={id} value={description} />
-                ))}
-            </ComboboxList>
+              {status === "OK" && renderSuggestions()}</ComboboxList>
           </ComboboxPopover>
         </Combobox>
       </div>
