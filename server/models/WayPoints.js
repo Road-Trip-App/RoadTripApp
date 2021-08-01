@@ -15,20 +15,10 @@ const wayPointsSchema = new Schema({
     type: Number,
     required: false,
   },
-  comments: [
-    {
-      commentText: {
-        type: String,
-        required: true,
-        minlength: 1,
-        maxlength: 280,
-      },
-      commentAuthor: {
-        type: String,
-        required: true,
-      },
-    },
-  ],
+  comments: {
+    type: String,
+    required: false,
+  },
 });
 
 const WayPoints = model("WayPoints", wayPointsSchema);

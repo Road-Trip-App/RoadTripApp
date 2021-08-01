@@ -14,6 +14,17 @@ const resolvers = {
     users: async () => {
       return User.find();
     },
+    roadTrips: async (parent, { username }) => {
+      const params = username ? { username } : {};
+      return RoadTrip.find(params).sort({ createdAt: -1 });
+    },
+    roadTrip: async (parent, { roadTripId }) => {
+      return RoadTrip.findOne({ _id: roadTripId });
+    },
+    waypoints: async (parent, { roadTripId }) => {
+      const params = roadTripId ? { roadTripId } : {};
+      return WayPoints.find(params).sort({ createdAt: -1 });
+    },
   },
   
 
@@ -51,20 +62,25 @@ const resolvers = {
       return { token, user };
     },
 
-  addTrip: async (parent, { RoadTrip }, context) => {
-    if (context.user) {
-        console.log(context.user)
-        // this looks good too
-        const updatedTripData = await User.findByIdAndUpdate(
-            { _id: context.user._id },
-            { $push: { savedTrips: RoadTrip } }, 
-            { new: true }
-        );
-        return updatedRoadTrip
-    }
-    throw new AuthenticationError('Please Log in to save a trip')
-}
-  },
+    addWayPoint: async (parent, { thoughtText, thoughtAuthor }) => {
+      return WayPoints.create({ thoughtText, thoughtAuthor });
+    },
+
+  // addTrip: async (parent, { RoadTrip }, context) => {
+  //   if (context.user) {
+  //       console.log(context.user)
+  //       // this looks good too
+  //       const updatedTripData = await User.findByIdAndUpdate(
+  //           { _id: context.user._id },
+  //           { $push: { savedTrips: RoadTrip } }, 
+  //           { new: true }
+  //       );
+  //       return updatedTripData
+  //     }
+  //     throw new AuthenticationError('Please Log in to save a trip')
+  //   }
+  // },
+  }
 };
 
 module.exports = resolvers;
