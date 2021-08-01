@@ -1,40 +1,42 @@
 import React from "react";
 import "./NewTripForm.css";
+import {Link} from 'react-router-dom'
+import WayPointForm from "../WaypointForm/WaypointForm";
 
 const NewTripForm = () => {
   return (
     <div>
-      <div class="NewTripForm">
+      <div className="NewTripForm">
         <div className="newform-container">
-          <div class="input-group1 input-group-lg">
-            <span class="input-group-text" id="inputGroup-sizing-lg">
+          <div className="input-group1">
+            <span className="input-group-text" id="inputGroup">
               ORIGIN LOCATION
             </span>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-lg"
+              aria-describedby="inputGroup mb-3"
             />
           </div>
 
-          <div class="input-group2 input-group-lg">
-            <span class="input-group-text" id="inputGroup-sizing-lg">
+          <div className="input-group2">
+            <span className="input-group-text" id="inputGroup">
               DESTINATION
             </span>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-lg"
+              aria-describedby="inputGroup mb-3"
             />
           </div>
 
-          <div class="input-group3 mb-3">
-            <label class="input-group-text2" for="TILE PHOTO">
+          <div className="input-group3 mb-3">
+            <label className="input-group-text2" htmlfor="TILE PHOTO">
               TILE PHOTO
             </label>
-            <select class="form-select" name="tile-photo" id="tile-photo">
+            <select className="form-select" name="tile-photo" id="tile-photo">
               <option selected>Choose file</option>
               <option value="photo1">Mountains</option>
               <option value="photo2">Lake</option>
@@ -45,11 +47,14 @@ const NewTripForm = () => {
             </select>
           </div>
 
-          <div class="input-group mb-3">
-
-            <button class="btn btn-danger btn-block" type="addstop">
-              ADD A PIT STOP
+          <div className="input-group mb-3">
+            <Link to="/way-point">
+            <button onClick={WayPointForm} className="btn btn-primary btn-block" type="addstop">
+              Add A Pit Stop
             </button>
+            </Link>
+
+
           </div>
         </div>
       </div>

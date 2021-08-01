@@ -25,12 +25,15 @@ const Signup = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log(formState);
+    console.log("foormstate", formState);
+    console.log("event,", event)
 
     try {
       const { data } = await addUser({
         variables: { ...formState },
       });
+
+      console.log("data", data)
 
       Auth.login(data.addUser.token);
     } catch (e) {
@@ -41,22 +44,22 @@ const Signup = () => {
   return (
     <main className="flex-row justify-center mb-4">
       <div className="col-12 col-lg-10">
-        <div className="card">
+        <div className="card" style={{ width: '18rem' }}>
           <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
           <div className="card-body">
             {data ? (
               <p>
-                Success! You may now head{' '}
+                Success! You may now head{" "}
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
                 <input
                   className="form-input"
-                  placeholder="Your username"
+                  placeholder="Your Username"
                   name="username"
                   type="text"
-                  value={formState.name}
+                  value={formState.username}
                   onChange={handleChange}
                 />
                 <input
@@ -77,7 +80,7 @@ const Signup = () => {
                 />
                 <button
                   className="btn btn-block btn-primary"
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: "pointer" }}
                   type="submit"
                 >
                   Submit
