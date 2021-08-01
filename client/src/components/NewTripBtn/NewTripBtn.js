@@ -6,14 +6,24 @@ import { Link } from 'react-router-dom';
 import NewTripForm  from '../NewTripForm/NewTripForm';
 
 export function NewTripBtn() {
-  return (
+  return(
+    <>
   <Card className="d-flex justify-content-center bg-info">
   <Card.Body className=".bg-info">
-    <Link to="/new-trip">
+    <Link to="/banana">
     <Button  onclick={NewTripForm} className="startBtn" variant="primary">START A NEW TRIP!</Button>
     </Link>
   </Card.Body>
 </Card>
+
+<Card className="d-flex justify-content-center bg-info">
+<Card.Body className=".bg-info">
+  <Link to="/new-trip">
+  <Button  onclick={NewTripForm} className="existingBtn" variant="primary">GO TO AN EXISTING TRIP</Button>
+  </Link>
+</Card.Body>
+</Card>
+</>
 );
 }
 

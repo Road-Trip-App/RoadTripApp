@@ -13,7 +13,7 @@ export function NewTrip() {
           <Card.Text>
             LOOK A TRIP
           </Card.Text>
-          <Link to="/banana">
+          <Link to="/existing-trip">
             <Button className="go-btn" variant="primary">Go!</Button>
 
           </Link>

@@ -18,6 +18,7 @@ import MapContainer from './pages/MapContainer';
 import NewTripBtn from './components/NewTripBtn/NewTripBtn';
 import NewTripForm from './components/NewTripForm/NewTripForm';
 import WayPointForm from './components/WaypointForm/WaypointForm';
+// import ExistingTrip from './components/ExistingPins/ExistingPins';
 
 
 
@@ -63,6 +64,9 @@ function App() {
             <Route  exact path="/new-trip">
               <NewTrip />
             </Route>
+            {/* <Route  exact path="/existing-pins">
+              <NewTrip />
+            </Route> */}
             {/* silly test path */}
             <Route exact path="/banana">
               <NewTripForm/>
