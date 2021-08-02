@@ -22,7 +22,7 @@ const typeDefs = gql`
     updateUser(username: String, email: String, password: String): User
     login(email: String!, password: String!): Auth
     addWaypoint(RoadTrip: Waypoint!): User
-    addTrip(RoadTrip): User
+    addRoadTrip(RoadTrip): User
   }
 
   type RoadTrip {
@@ -38,8 +38,6 @@ input Waypoint {
   Completed: Boolean
   RoadTrip: [RoadTrip]!
 }
-
-
 `;
 
 module.exports = typeDefs;

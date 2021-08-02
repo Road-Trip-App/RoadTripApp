@@ -51,7 +51,7 @@ const resolvers = {
       return { token, user };
     },
 
-  addTrip: async (parent, { RoadTrip }, context) => {
+  addRoadTrip: async (parent, { RoadTrip }, context) => {
     if (context.user) {
         console.log(context.user)
         // this looks good too
@@ -60,7 +60,7 @@ const resolvers = {
             { $push: { savedTrips: RoadTrip } }, 
             { new: true }
         );
-        return updatedRoadTrip
+        return updatedTripData
     }
     throw new AuthenticationError('Please Log in to save a trip')
 }

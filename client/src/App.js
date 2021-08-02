@@ -9,6 +9,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 
 
+
 import Header from './components/Header';
 import NewTrip from './components/TripCard/TripCard';
 import Footer from './components/Footer';
@@ -54,7 +55,7 @@ function App() {
             <Route exact path="/">
               <NewTripBtn />
             </Route>
-            <NewTrip />
+            {/* <NewTrip /> */}
             <Route exact path="/login">
               <Login />
             </Route>
