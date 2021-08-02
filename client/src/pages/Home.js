@@ -4,9 +4,12 @@ import Image from 'react-bootstrap/Image'
 export function Home() {
     return(
         
-    <div>Welcome to RoadTripPin! Where you can store your pins to make sure you don't miss a stop on your trip!
+    <div className="homestyle">
+        
+        <p className="homestyle">Welcome to RoadTripPin! Where you can store your pins to make sure you don't miss a stop on your trip!
+        </p>
 
-<Image src="holder.js/100px250" fluid />
+<Image src="../assets/roadtripphoto.jpg" fluid />
 </div>
     );
 }
