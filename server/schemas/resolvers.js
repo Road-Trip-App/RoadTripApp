@@ -63,6 +63,20 @@ const resolvers = {
       return { token, user };
     },
 
+  addRoadTrip: async (parent, { RoadTrip }, context) => {
+    if (context.user) {
+        console.log(context.user)
+        // this looks good too
+        const updatedTripData = await User.findByIdAndUpdate(
+            { _id: context.user._id },
+            { $push: { savedTrips: RoadTrip } }, 
+            { new: true }
+        );
+        return updatedTripData
+    }
+    throw new AuthenticationError('Please Log in to save a trip')
+}
+  },
     addWayPoint: async (parent, { thoughtText, thoughtAuthor }) => {
       return WayPoints.create({ thoughtText, thoughtAuthor });
     },
@@ -81,7 +95,7 @@ const resolvers = {
   //     throw new AuthenticationError('Please Log in to save a trip')
   //   }
   // },
-  }
+ // }
 };
 
 module.exports = resolvers;
