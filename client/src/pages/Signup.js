@@ -5,6 +5,7 @@ import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
+import "./signup.css";
 
 const Signup = () => {
   const [formState, setFormState] = useState({
@@ -42,10 +43,11 @@ const Signup = () => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
+    <main className="row login-signup">
+      <div className="col">
         <div className="card" style={{ width: '18rem' }}>
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
+        <div className="card-title">
+          <h4 className="page-title text-dark">Sign Up</h4>
           <div className="card-body">
             {data ? (
               <p>
@@ -54,6 +56,7 @@ const Signup = () => {
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
+                 <label for="username" class="form-label">Username:</label>
                 <input
                   className="form-input"
                   placeholder="Your Username"
@@ -62,14 +65,16 @@ const Signup = () => {
                   value={formState.username}
                   onChange={handleChange}
                 />
+                 <label for="email" class="form-label">Email:</label>
                 <input
                   className="form-input"
-                  placeholder="Your email"
+                  placeholder="Your Email"
                   name="email"
                   type="email"
                   value={formState.email}
                   onChange={handleChange}
                 />
+                 <label for="password-signup" class="form-label">Password:</label>
                 <input
                   className="form-input"
                   placeholder="******"
@@ -78,13 +83,15 @@ const Signup = () => {
                   value={formState.password}
                   onChange={handleChange}
                 />
+                 <div className="form-group">
                 <button
                   className="btn btn-block btn-primary"
                   style={{ cursor: "pointer" }}
                   type="submit"
                 >
-                  Submit
+                 Sign-up
                 </button>
+                </div>
               </form>
             )}
 
@@ -93,6 +100,7 @@ const Signup = () => {
                 {error.message}
               </div>
             )}
+          </div>
           </div>
         </div>
       </div>
