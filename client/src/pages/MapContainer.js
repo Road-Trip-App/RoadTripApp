@@ -59,7 +59,7 @@ console.log(process.env);
 
  export default function App() {
   return (
-    <div style={{ width: "80vw", height: "80vh" }}>
+    <div style={{ width: "80vw", height: "40vh" }}>
       <MapWrapped
            
         googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY

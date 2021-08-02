@@ -20,7 +20,7 @@ import MapContainer from './pages/MapContainer';
 import NewTripBtn from './components/NewTripBtn/NewTripBtn';
 import NewTripForm from './components/NewTripForm/NewTripForm';
 import WayPointForm from './components/WaypointForm/WaypointForm';
-import SingleTripView from './components/SingleTripView/SingleTripView';
+import PinCard from './components/PinCard/PinCard';
 import NewPinBtn from './components/NewPinBtn/NewPinBtn';
 import TripCard from './components/TripCard/TripCard'
 
@@ -47,7 +47,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="flex-column justify-flex-start min-400-vh w-full bg-blue">
+        <div className="flex-column justify-flex-start min-400-vh w-full bg-blue spacing">
           <Header />
           <div className="container">
             <Route exact path="/">
@@ -71,18 +71,25 @@ function App() {
             <Route exact path="/new-trip">
               <NewTrip />
             </Route>
+
+
             <Route exact path="/SingleTripView">
               <MapContainer />
               <NewPinBtn />
+              <PinCard/>
 
             </Route>
             {/* silly test path */}
             <Route exact path="/banana">
               <NewTripForm />
             </Route>
+
+
             <Route exact path="/way-point">
               <WayPointForm />
             </Route>
+
+
           </div>
           <Footer />
         </div>

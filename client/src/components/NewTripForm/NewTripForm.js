@@ -49,7 +49,7 @@ const NewTripForm = () => {
 
           <div className="input-group mb-3">
             <Link to="/way-point">
-            <button onClick={WayPointForm} className="btn btn-primary btn-block" type="addstop">
+            <button onClick={WayPointForm} className="btn btn-primary btn-block addpinbtnstyle" type="addstop">
               Add A Pin
             </button>
             </Link>
