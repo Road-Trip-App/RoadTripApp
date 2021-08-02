@@ -1,6 +1,9 @@
 .startBtn{
   background-color: forestgreen;
   width:100%;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  box-shadow: 2px 2px 6px #000000;
+  border-radius: 50px;
 }
 
 .startBtn:hover{

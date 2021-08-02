@@ -1,4 +1,8 @@
 .background-colour{
     background-color: darkgrey;
+    height: 10%;
 }
 
+.radius{
+    border-radius: 50px;
+}

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export function SingleTripView() {
     return (
         <>
-            <Card className="text-center btnstyle">
+            <Card className="text-center cardstyle">
                 <Card.Header>From ORIGIN to DESTINATION</Card.Header>
                 <Card.Body>
                     <Card.Title>Some words</Card.Title>
