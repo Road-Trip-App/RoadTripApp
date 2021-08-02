@@ -14,17 +14,16 @@ import Header from './components/Header';
 import NewTrip from './components/TripCard/TripCard';
 import Footer from './components/Footer';
 import Login from './pages/Login';
+import Home from './pages/Home';
+import Dashboard from './pages/Dashboard';
 import Signup from './pages/Signup';
 import MapContainer from './pages/MapContainer';
 import NewTripBtn from './components/NewTripBtn/NewTripBtn';
 import NewTripForm from './components/NewTripForm/NewTripForm';
 import WayPointForm from './components/WaypointForm/WaypointForm';
-import SingleTripView from './components/SingleTripView/SingleTripView.js';
-
-
-
-
-
+import PinCard from './components/PinCard/PinCard';
+import NewPinBtn from './components/NewPinBtn/NewPinBtn';
+import TripCard from './components/TripCard/TripCard'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -38,7 +37,7 @@ const authLink = setContext((_, { headers }) => {
       authorization: token ? `Bearer ${token}` : '',
     },
   };
-});           
+});
 
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
@@ -49,34 +48,51 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="flex-column justify-flex-start min-400-vh w-full bg-blue">
+        <div className="flex-column justify-flex-start min-400-vh w-full bg-blue spacing">
           <Header />
           <div className="container">
             <Route exact path="/">
-              <NewTripBtn />
+              <Home />
+            </Route>
+
+            <Route exact path="/dashboard">
+              <Dashboard />
             </Route>
             {/* <NewTrip /> */}
+
             <Route exact path="/login">
               <Login />
             </Route>
+
+
             <Route exact path="/signup">
               <Signup />
             </Route>
-            <Route  exact path="/new-trip">
+
+            
+            <Route exact path="/new-trip">
               <NewTrip />
             </Route>
-            <Route  exact path="/SingleTripView">
-            <MapContainer/>
-              <SingleTripView />
+
+
+            <Route exact path="/SingleTripView">
+              <MapContainer />
+              <NewPinBtn />
+              <PinCard/>
+
             </Route>
             {/* silly test path */}
             <Route exact path="/banana">
-              <NewTripForm/>
+              <NewTripForm />
             </Route>
+
+
             <Route exact path="/way-point">
               <WayPointForm />
             </Route>
-            </div>
+
+
+          </div>
           <Footer />
         </div>
       </Router>

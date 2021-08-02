@@ -14,17 +14,17 @@ export function NewTrip() {
           <Card.Text>
             LOOK A TRIP
           </Card.Text>
-          <Link to="/existing-trip">
-            <Button className="go-btn" variant="primary">Go!</Button>
+          <Link to="/SingleTripView">
+            <Button className="go-btn" variant="primary">View</Button>
 
           </Link>
-          <Link to="/way-point">
+          {/* <Link to="/way-point">
             <Button className="edit-btn" variant="secondary">Add another Pin</Button>
-          </Link>
+          </Link> */}
         </Card.Body>
         <Card.Footer className="text-muted">Approx 14 hours</Card.Footer>
       </Card>
-
+{/* 
       <Card className="text-center btnstyle">
         <Card.Header> 2- From ORIGIN to DESTINATION</Card.Header>
         <Card.Body>
@@ -59,7 +59,7 @@ export function NewTrip() {
           </Link>
         </Card.Body>
         <Card.Footer className="text-muted">Approx 14 hours</Card.Footer>
-      </Card>
+      </Card> */}
     </>
   );
 }

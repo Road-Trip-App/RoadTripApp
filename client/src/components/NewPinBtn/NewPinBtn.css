@@ -1,13 +1,13 @@
-.startBtn{
-  background-color: forestgreen;
+.NewPinBtn{
+  background-color: rgb(170, 77, 0);
   width:100%;
   border: 1px solid rgba(0, 0, 0, 0.125);
   box-shadow: 2px 2px 6px #000000;
   border-radius: 50px;
 }
 
-.startBtn:hover{
-  background-color: rgb(25, 95, 25);
+.NewPinBtn:hover{
+  background-color: rgb(170, 77, 25);
 
 }
 

@@ -49,7 +49,8 @@ export default function WayPointForm() {
     }
 
     return (
-        <div className="waypointstyle ">
+        <div
+               className="waypointstyle ">
             <form>
             <input
             value={stopName}
@@ -57,6 +58,7 @@ export default function WayPointForm() {
             onChange={handleFormChange}
             type="text"
             placeholder="Pin Name"
+            className="textfield"
     
             />
             {/* not sure but depending on what data the api has we may not 
@@ -67,6 +69,7 @@ export default function WayPointForm() {
             onChange={handleFormChange}
             type="text"
             placeholder="Address"
+            className="textfield"
             />
             {/* Might switch duration to a drop down */}
             <input
@@ -75,10 +78,12 @@ export default function WayPointForm() {
             onChange={handleFormChange}
             type="text"
             placeholder="Duration"
+            className="textfield"
             />
             <textarea 
             value={comment}
             name="comment"
+            className="textfield"
             onChange={handleFormChange}
             type="text"
             placeholder="Add more information such as restrooms or parking availability"
@@ -86,7 +91,7 @@ export default function WayPointForm() {
             {error && (
                 <p>{error}</p>
             )}
-            <button type="button" onClick={handleFormSubmit}>Add Stop</button>
+            <button type="button" className="pinbtn" onClick={handleFormSubmit}>Add Pin</button>
             </form>
         </div>
     )

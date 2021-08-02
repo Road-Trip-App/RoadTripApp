@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
-
+import './login.css'
 import Auth from '../utils/auth';
 
 const Login = (props) => {
@@ -42,26 +42,29 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-6 w-full">
-      <div className="col-12 col-lg-10">
+    <main className="row login">
+      <div className="col">
         <div className="card" style={{ width: '18rem' }}>
-          <h4 className="card-header bg-dark text-light p-6">Login</h4>
+        <div className="card-title">
+          <h4 className="page-title text-dark">Login</h4>
           <div className="card-body">
             {data ? (
               <p>
                 Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
+                <Link to="/dashboard">back to the homepage.</Link>
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
+                 <label for="email" class="form-label">Email:</label>
                 <input
                   className="form-input"
-                  placeholder="Your email"
+                  placeholder="name@example.com"
                   name="email"
                   type="email"
                   value={formState.email}
                   onChange={handleChange}
                 />
+                <label for="password-signup" class="form-label">Password:</label>
                 <input
                   className="form-input"
                   placeholder="******"
@@ -70,6 +73,7 @@ const Login = (props) => {
                   value={formState.password}
                   onChange={handleChange}
                 />
+                <div className="form-group">
                 <button
                   className="btn btn-block btn-primary"
                   style={{ cursor: 'pointer' }}
@@ -77,6 +81,7 @@ const Login = (props) => {
                 >
                   Submit
                 </button>
+                </div>
               </form>
             )}
 
@@ -85,6 +90,7 @@ const Login = (props) => {
                 {error.message}
               </div>
             )}
+          </div>
           </div>
         </div>
       </div>

@@ -8,10 +8,13 @@ body {
     justify-content: center;
     box-shadow: 4px 4px 6px;
     color: #cbd3e0;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    box-shadow: 2px 2px 6px #000000;
 }
 
-.edit-btn{
-background-color: rgb(68, 0, 255);
+.pinbtn{
+background-color: rgb(9, 145, 31);
+border-radius: 55px;
 }
 
 .go-btn{
@@ -25,4 +28,10 @@ background-color: rgb(68, 0, 255);
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    box-shadow: 2px 2px 6px #000000;
+}
+
+.textfield{
+    width:100%;
 }
