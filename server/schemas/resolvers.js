@@ -1,5 +1,5 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User } = require("../models");
+const { User ,RoadTrip, WayPoints } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
@@ -30,6 +30,7 @@ const resolvers = {
 
   Mutation: {
     addUser: async (parent, args) => {
+      console.log("testing ");
       const user = await User.create(args);
       const token = signToken(user);
 
@@ -48,7 +49,7 @@ const resolvers = {
       const user = await User.findOne({ email });
 
       if (!user) {
-        throw new AuthenticationError("Incorrect credentials");
+        throw new AuthenticationError('No user found with this email address');
       }
 
       const correctPw = await user.isCorrectPassword(password);

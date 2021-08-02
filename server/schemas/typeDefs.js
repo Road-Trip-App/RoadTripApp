@@ -5,12 +5,13 @@ const typeDefs = gql`
     _id: ID
     username: String
     email: String
+    password: String
   }
 
   type Query {
-    users: [User]
+    # users: [User]
     user(username: String!): User
-    me: User
+    # me: User
   }
   type Auth {
     token: ID
@@ -21,25 +22,22 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     updateUser(username: String, email: String, password: String): User
     login(email: String!, password: String!): Auth
-    addWaypoint(RoadTrip: Waypoint!): User
+    addWaypoint(RoadTrip: WayPoints!): User
     addTrip(RoadTrip): User
   }
 
   type RoadTrip {
-    origin: String!
-    destination: String!
-}
+    name: String
+    waypoints: [Waypoints]
+  }
 
-input Waypoint {
-  Name: [String]
-  location: String!
-  Duration: String
-  Comments: String
-  Completed: Boolean
-  RoadTrip: [RoadTrip]!
-}
-
-
+  type WayPoints {
+    name: [String]
+    location: String
+    duration: String
+    comments: String
+  
+  }
 `;
 
 module.exports = typeDefs;
