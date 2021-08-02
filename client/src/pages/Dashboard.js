@@ -11,7 +11,7 @@ export function Dashboard() {
     <div>
 
         <NewTripBtn />
-        <NewPinBtn />
+        
         <TripCard />
        
     </div>
