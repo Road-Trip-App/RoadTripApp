@@ -25,6 +25,9 @@ import PinCard from './components/PinCard/PinCard';
 import NewPinBtn from './components/NewPinBtn/NewPinBtn';
 import TripCard from './components/TripCard/TripCard';
 import Auth from './utils/auth';
+import Forecast from "./components/Forecast/Forecast";
+
+export const weatherApiKey = process.env.REACT_APP_WEATHER_API
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -71,6 +74,7 @@ function App() {
         
             <Route exact path="/dashboard">
              <Dashboard />
+             <Forecast />
 
              
             </Route>
