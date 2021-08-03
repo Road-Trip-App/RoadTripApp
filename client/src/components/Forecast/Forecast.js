@@ -1,8 +1,17 @@
 import React, { useState } from 'react';
 import Conditions from '../Conditions/Conditions';
 import classes from './Forecast.module.css';
+import dotenv from 'dotenv';
+dotenv.config()
+
+
+
+
+
 
 const Forecast = () => {
+    
+
     let [city, setCity] = useState('');
     let [unit, setUnit] = useState('metric');
     let [responseObj, setResponseObj] = useState({});
@@ -16,7 +25,7 @@ const Forecast = () => {
         , {
             "method": "GET",
             "headers": {
-                "x-rapidapi-key": "525b5d8eaemsh7f1a6e5c7d8055ap119557jsncf0e47594c67",
+                "x-rapidapi-key": 'process.env.REACT_APP_WEATHER_API',
                 "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com"
             }
         })
@@ -25,6 +34,8 @@ const Forecast = () => {
             setResponseObj(response)
         })
     }
+    
+
     return (
        <>
          
