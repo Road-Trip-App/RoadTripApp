@@ -23,7 +23,8 @@ import NewTripForm from './components/NewTripForm/NewTripForm';
 import WayPointForm from './components/WaypointForm/WaypointForm';
 import PinCard from './components/PinCard/PinCard';
 import NewPinBtn from './components/NewPinBtn/NewPinBtn';
-import TripCard from './components/TripCard/TripCard'
+import TripCard from './components/TripCard/TripCard';
+import Auth from './utils/auth';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -51,23 +52,33 @@ function App() {
         <div className="flex-column justify-flex-start min-400-vh w-full bg-blue spacing">
           <Header />
           <div className="container">
-            <Route exact path="/">
-              <Home />
+          {!Auth.loggedIn() ? 
+          <>
+            <Route path='/'>
+              <Login/>
+            </Route>  
+
+            <Route path='/signup'>
+              <Signup/>
             </Route>
 
+            </>
+            :
+            <>
+            <Route path='/'>
+              <Home /> 
+            </Route>
+        
             <Route exact path="/dashboard">
-              <Dashboard />
-            </Route>
-            {/* <NewTrip /> */}
+             <Dashboard />
 
-            <Route exact path="/login">
-              <Login />
+             
             </Route>
 
 
-            <Route exact path="/signup">
-              <Signup />
-            </Route>
+
+
+
 
             
             <Route exact path="/new-trip">
@@ -90,8 +101,8 @@ function App() {
             <Route exact path="/way-point">
               <WayPointForm />
             </Route>
-
-
+            </>
+          }
           </div>
           <Footer />
         </div>
