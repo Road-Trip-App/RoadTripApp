@@ -27,6 +27,8 @@ import TripCard from './components/TripCard/TripCard';
 import Auth from './utils/auth';
 import Forecast from "./components/Forecast/Forecast";
 
+export const weatherApiKey = process.env.REACT_APP_WEATHER_API
+
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
