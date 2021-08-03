@@ -3,35 +3,43 @@ body {
   }
 
 
-.btn-danger {
-    display: flex;
-    justify-content: center;
-    box-shadow: 4px 4px 6px;
-    color: #cbd3e0;
-    border: 1px solid rgba(0, 0, 0, 0.125);
-    box-shadow: 2px 2px 6px #000000;
-}
-
 .pinbtn{
-background-color: rgb(9, 145, 31);
-border-radius: 55px;
+    background-color: rgb(9, 145, 31);
+    border-radius: 55px;
+    margin: 10px;
 }
-
-.go-btn{
-    background-color: rgb(13, 153, 32);
-    border-color: darkslategray;
-    }
 
 .waypointstyle{
-    background-color: #5bc0de;
-    border-radius: 55px;
+    background-color: #5bc0de; 
+    border-radius: 10px;
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
     border: 1px solid rgba(0, 0, 0, 0.125);
     box-shadow: 2px 2px 6px #000000;
 }
 
 .textfield{
     width:100%;
+}
+
+form {
+    padding: 20px;
+    width: 50%;
+}
+
+@media screen and (max-width: 700px) {
+    form {
+     width: 90%;
+     margin-left: -40px;
+    }
+  }
+
+input {
+    margin: 10px;
+}
+
+textarea {
+    height: 100px;
+    margin-left: 10px;
 }
