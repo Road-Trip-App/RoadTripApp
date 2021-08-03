@@ -38,7 +38,7 @@ const Signup = () => {
 
       Auth.login(data.addUser.token);
     } catch (e) {
-      console.error(e);
+      console.error(  'yo', e);
     }
   };
 

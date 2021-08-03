@@ -11,26 +11,26 @@ const resolvers = {
 
       return user;
     },
-    users: async () => {
-      return User.find();
-    },
-    roadTrips: async (parent, { username }) => {
-      const params = username ? { username } : {};
-      return RoadTrip.find(params).sort({ createdAt: -1 });
-    },
-    roadTrip: async (parent, { roadTripId }) => {
-      return RoadTrip.findOne({ _id: roadTripId });
-    },
-    waypoints: async (parent, { roadTripId }) => {
-      const params = roadTripId ? { roadTripId } : {};
-      return WayPoints.find(params).sort({ createdAt: -1 });
-    },
+    // users: async () => {
+    //   return User.find();
+    // },
+    // roadTrips: async (parent, { username }) => {
+    //   const params = username ? { username } : {};
+    //   return RoadTrip.find(params).sort({ createdAt: -1 });
+    // },
+    // roadTrip: async (parent, { roadTripId }) => {
+    //   return RoadTrip.findOne({ _id: roadTripId });
+    // },
+    // waypoints: async (parent, { roadTripId }) => {
+    //   const params = roadTripId ? { roadTripId } : {};
+    //   return WayPoints.find(params).sort({ createdAt: -1 });
+    // },
   },
   
 
   Mutation: {
     addUser: async (parent, args) => {
-      console.log("testing ");
+      console.log('Hello')
       const user = await User.create(args);
       const token = signToken(user);
 
@@ -63,39 +63,24 @@ const resolvers = {
       return { token, user };
     },
 
-  addRoadTrip: async (parent, { RoadTrip }, context) => {
-    if (context.user) {
-        console.log(context.user)
-        // this looks good too
-        const updatedTripData = await User.findByIdAndUpdate(
-            { _id: context.user._id },
-            { $push: { savedTrips: RoadTrip } }, 
-            { new: true }
-        );
-        return updatedTripData
-    }
-    throw new AuthenticationError('Please Log in to save a trip')
-}
-  },
-    addWayPoint: async (parent, { thoughtText, thoughtAuthor }) => {
-      return WayPoints.create({ thoughtText, thoughtAuthor });
+//   addRoadTrip: async (parent, { RoadTrip }, context) => {
+//     if (context.user) {
+//         console.log(context.user)
+//         // this looks good too
+//         const updatedTripData = await User.findByIdAndUpdate(
+//             { _id: context.user._id },
+//             { $push: { savedTrips: RoadTrip } }, 
+//             { new: true }
+//         );
+//         return updatedTripData
+//     }
+//     throw new AuthenticationError('Please Log in to save a trip')
+// }
     },
-
-  // addTrip: async (parent, { RoadTrip }, context) => {
-  //   if (context.user) {
-  //       console.log(context.user)
-  //       // this looks good too
-  //       const updatedTripData = await User.findByIdAndUpdate(
-  //           { _id: context.user._id },
-  //           { $push: { savedTrips: RoadTrip } }, 
-  //           { new: true }
-  //       );
-  //       return updatedTripData
-  //     }
-  //     throw new AuthenticationError('Please Log in to save a trip')
-  //   }
-  // },
- // }
-};
+    // addWayPoint: async (parent, { thoughtText, thoughtAuthor }) => {
+    //   return WayPoints.create({ thoughtText, thoughtAuthor });
+    // },
+  
+}
 
 module.exports = resolvers;
