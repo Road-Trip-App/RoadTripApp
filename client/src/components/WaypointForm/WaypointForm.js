@@ -49,8 +49,7 @@ export default function WayPointForm() {
     }
 
     return (
-        <div
-               className="waypointstyle ">
+        <div className="waypointstyle ">
             <form>
             <input
             value={stopName}
