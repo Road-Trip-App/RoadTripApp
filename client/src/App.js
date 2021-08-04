@@ -53,10 +53,10 @@ function App() {
         {/* <div className="flex-column justify-flex-start min-400-vh w-full bg-blue spacing"> */}
         <Header />
         {/* <div className="container"> */}
-        {/* {!Auth.loggedIn() ? (
-          <> */}
+        {!Auth.loggedIn() ? (
+          <>
             <Route exact path="/">
-              <Home />
+              < Home/>
             </Route>
             <Route exact path="/login">
               <Login />
@@ -65,18 +65,18 @@ function App() {
             <Route exact path="/signup">
               <Signup />
             </Route>
-          {/* </>
+          </>
         ) : (
-          <> */}
-            {/* <Route exact path="/login">
+          <>
+            <Route exact path="/login">
               <Login />
             </Route>
 
-            <Route exact path="/">
+            {/* <Route exact path="/">
               <Home />
             </Route> */}
 
-            <Route exact path="/dashboard">
+            <Route exact path="/">
               <Dashboard />
               <Forecast />
             </Route>
@@ -98,8 +98,8 @@ function App() {
             <Route exact path="/way-point">
               <WayPointForm />
             </Route>
-          {/* </>
-        )} */}
+          </>
+        )}
         {/* </div> */}
         <Footer />
         {/* </div> */}

@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "react-bootstrap/Image";
+import Image from "../assets/roadtripphoto.jpg";
 
 export function Home() {
   return (
@@ -9,7 +9,7 @@ export function Home() {
         don't miss a stop on your trip!
       </p>
 
-      <Image src="../assets/roadtripphoto.jpg" fluid />
+      <img src={Image} alt="Car Driving" Height="760" width="2000"/>
     </div>
   );
 }
