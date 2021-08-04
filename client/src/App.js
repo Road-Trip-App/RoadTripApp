@@ -77,8 +77,9 @@ function App() {
             </Route> */}
 
             <Route exact path="/">
+            <Forecast />
               <Dashboard />
-              <Forecast />
+            
             </Route>
 
             <Route exact path="/new-trip">
