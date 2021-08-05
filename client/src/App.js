@@ -24,6 +24,7 @@ import NewPinBtn from "./components/NewPinBtn/NewPinBtn";
 import TripCard from "./components/TripCard/TripCard";
 import Auth from "./utils/auth";
 import Forecast from "./components/Forecast/Forecast";
+import Calandar from "./components/Calandar/Calandar";
 
 export const weatherApiKey = process.env.REACT_APP_WEATHER_API;
 
@@ -61,6 +62,9 @@ function App() {
             <Route exact path="/login">
               <Login />
             </Route>
+            <Route exact path="/calandar">
+              <Calandar />
+            </Route>
 
             <Route exact path="/signup">
               <Signup />
@@ -78,6 +82,7 @@ function App() {
 
             <Route exact path="/">
             <Forecast />
+    
               <Dashboard />
             
             </Route>
