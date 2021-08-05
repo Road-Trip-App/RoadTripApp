@@ -31,10 +31,10 @@ const Forecast = () => {
 
   return (
     <>
-      <div>
+      <div className="d-flex justify-content-center bg-info">
         <h2>Find Current Weather Conditions</h2>
         <form onSubmit={getForecast}>
-          <input
+          <input 
             type="text"
             placeholder="Enter City"
             maxLength="50"
@@ -67,7 +67,7 @@ const Forecast = () => {
           </button>
         </form>
 
-        <Conditions responseObj={responseObj} />
+        <Conditions  responseObj={responseObj} />
       </div>
     </>
   );

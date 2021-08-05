@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 import "./login.css";
@@ -9,7 +10,7 @@ const Login = (props) => {
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error, data }] = useMutation(LOGIN_USER);
   // accessing brower history
-  const history = useHistory();
+  // const history = useHistory();
 
   // update state based on form input changes
   const handleChange = (event) => {
@@ -32,10 +33,10 @@ const Login = (props) => {
       Auth.login(data.login.token);
 
       // if we are logged in
-      if (data) {
-        // we are redirecting (fingers crossed) to dashboard
-        return history.push("/dashboard");
-      }
+      // if (data) {
+      //   // we are redirecting (fingers crossed) to dashboard
+      //   return history.push("/dashboard");
+      // }
     } catch (e) {
       console.error(e);
     }

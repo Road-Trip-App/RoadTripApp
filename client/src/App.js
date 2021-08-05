@@ -24,6 +24,7 @@ import NewPinBtn from "./components/NewPinBtn/NewPinBtn";
 import TripCard from "./components/TripCard/TripCard";
 import Auth from "./utils/auth";
 import Forecast from "./components/Forecast/Forecast";
+import Calandar from "./components/Calandar/Calandar";
 
 export const weatherApiKey = process.env.REACT_APP_WEATHER_API;
 
@@ -53,32 +54,37 @@ function App() {
         {/* <div className="flex-column justify-flex-start min-400-vh w-full bg-blue spacing"> */}
         <Header />
         {/* <div className="container"> */}
-        {/* {!Auth.loggedIn() ? (
-          <> */}
+        {!Auth.loggedIn() ? (
+          <>
             <Route exact path="/">
-              <Home />
+              < Home/>
             </Route>
             <Route exact path="/login">
               <Login />
+            </Route>
+            <Route exact path="/calandar">
+              <Calandar />
             </Route>
 
             <Route exact path="/signup">
               <Signup />
             </Route>
-          {/* </>
+          </>
         ) : (
-          <> */}
-            {/* <Route exact path="/login">
+          <>
+            <Route exact path="/login">
               <Login />
             </Route>
 
-            <Route exact path="/">
+            {/* <Route exact path="/">
               <Home />
             </Route> */}
 
-            <Route exact path="/dashboard">
+            <Route exact path="/">
+            <Forecast />
+    
               <Dashboard />
-              <Forecast />
+            
             </Route>
 
             <Route exact path="/new-trip">
@@ -98,8 +104,8 @@ function App() {
             <Route exact path="/way-point">
               <WayPointForm />
             </Route>
-          {/* </>
-        )} */}
+          </>
+        )}
         {/* </div> */}
         <Footer />
         {/* </div> */}

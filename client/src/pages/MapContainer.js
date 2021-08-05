@@ -55,7 +55,7 @@ import {
 
   
   const MapWrapped = withScriptjs(withGoogleMap(Map));
-console.log(process.env);
+// console.log(process.env);
 
  export default function App() {
   return (
