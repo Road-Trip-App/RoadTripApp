@@ -17,7 +17,7 @@ export function Home() {
         
           <Link to="/calandar">
             <Button onclick={Calandar} className="startBtn" variant="primary">
-              Check The Calandar
+              Check The Calendar
             </Button>
           </Link>
   

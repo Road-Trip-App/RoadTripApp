@@ -5,7 +5,7 @@ const Conditions = (props) => {
        
     <div className={classes.Wrapper}>
            {props.responseObj.cod === 200 ?
-               <div className="d-flex justify-content-center flex-direction-column bg-info">
+               <div className="">
                    <p><strong>{props.responseObj.name} </strong></p>
                    <p> It is currently {Math.round(props.responseObj.main.temp)} °C out with {props.responseObj.weather[0].description}. </p>
                    <p> The Wind Speed is {Math.round(props.responseObj.wind.speed)} miles per hour! </p>

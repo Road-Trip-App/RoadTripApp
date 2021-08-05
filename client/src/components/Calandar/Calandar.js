@@ -10,7 +10,8 @@ const Calandar = () => {
   };
   return (
     <div className="d-flex justify-content-center">
-      <Calendar onChange={onChange} value={date} />
+      <Calendar onClickDay onChange={onChange} value={date} />
+      {date.toString()}
     </div>
   );
 };
