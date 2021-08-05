@@ -44,7 +44,7 @@ const Signup = () => {
   };
 
   return (
-    <Container fluid>
+    <Container>
     <main className="row login-signup">
       <div className="col">
         <div className="card" style={{ width: '18rem' }}>

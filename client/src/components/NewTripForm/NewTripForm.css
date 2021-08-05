@@ -33,5 +33,17 @@
 
 .addpinbtnstyle{
     border-radius: 50px;
+    margin-left: 15px;
 
+}
+
+.inpute {
+    width: 95%;
+    margin: 5px auto;
+}
+
+.inputetwo {
+    width: 95%;
+    margin: 5px auto;
+    margin-top: 20px;
 }
