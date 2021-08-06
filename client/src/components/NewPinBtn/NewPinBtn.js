@@ -1,11 +1,11 @@
 import React from 'react';
-import Card from 'react-bootstrap/card';
-import Button from 'react-bootstrap/button';
+import Card from 'react-bootstrap-card';
+import Button from 'react-bootstrap-buttons';
 import "./NewPinBtn.css"
 import { Link } from 'react-router-dom';
 import WaypointForm  from '../WaypointForm/WaypointForm';
 
-export function NewPinBtn() {
+function NewPinBtn() {
   return(
     
   <Card className="d-flex justify-content-center bg-info">

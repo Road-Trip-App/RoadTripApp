@@ -1,17 +1,10 @@
 import React from 'react';
-//import { useQuery } from '@apollo/client';
-
-import Card from 'react-bootstrap/card';
-import Button from 'react-bootstrap/button';
+import Card from 'react-bootstrap-card';
+import Button from 'react-bootstrap-buttons';
 import { Link } from 'react-router-dom';
 import './TripCard.css'
 
-//import { QUERY_USER } from '../utils/queries';
-
-
-export function NewTrip(props) {
-
-
+function TripCard() {
   return (
     <>
       <Card className="text-center btnstyle">
@@ -71,4 +64,4 @@ export function NewTrip(props) {
   );
 }
 
-export default NewTrip;
+export default TripCard;
