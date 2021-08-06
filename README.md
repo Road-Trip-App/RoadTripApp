@@ -1,7 +1,7 @@
 # Road Trip Pin
 
 # Project Description
-Full Stack Web app in javascript, react and other things...
+RoadTripPin is a Full Stack Web application. It allows a user to sign up, login, explore their dashboard, start a new roadtrip, and save pins to this trip to have a fully functional google maps integrated list. Just click the links to see the addresses open up in google maps. Return to the app to find your next pin. There are enless roads of possibilities with RoadTripPin. 
 
 # Usage Information
 Click the login page, sign up for an account. Once signed in, you'll be able to add view and edit trips on your profile. 
@@ -50,10 +50,13 @@ tatyana.yarushin@gmail.com || LinkedIn @ Tatyana Yarushin || GitHub @ TatyanaYar
 `
 
 ## Additional Links: 
-
+Mock up:
 https://drive.google.com/file/d/1GzPn5NQ-d1GBu36lOQkJr3v1Yw0lPCxE/view?usp=sharing
 
-Working google doc
+Presentation:
+https://docs.google.com/presentation/d/1xQ4zkJ9YvEgHgh49qzppAaqED5mb2SRbTR6vEu1fhVk/edit?usp=sharing
+
+Working google doc:
 https://docs.google.com/document/d/1_ZS74Rq27_SiwUChJLzdaRNbvEbIBdkW8zaaUkRGeDc/edit?usp=sharing
 
 
