@@ -11,7 +11,7 @@ export function NewTripBtn() {
   <Card className="d-flex justify-content-center bg-info">
   <Card.Body className=".bg-info">
     <Link to="/banana">
-    <Button  onclick={NewTripForm} className="startBtn" variant="primary">START A NEW TRIP!</Button>
+    <Button  onClick={NewTripForm} className="startBtn" variant="primary">START A NEW TRIP!</Button>
     </Link>
   </Card.Body>
 </Card>

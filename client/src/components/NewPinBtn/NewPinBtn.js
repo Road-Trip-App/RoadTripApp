@@ -11,7 +11,7 @@ export function NewPinBtn() {
   <Card className="d-flex justify-content-center bg-info">
   <Card.Body className=".bg-info">
     <Link to="/way-point">
-    <Button  onclick={WaypointForm} className="NewPinBtn" variant="primary">Add a Pin</Button>
+    <Button  onClick={WaypointForm} className="NewPinBtn" variant="primary">Add a Pin</Button>
     </Link>
   </Card.Body>
 </Card>

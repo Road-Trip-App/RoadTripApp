@@ -16,14 +16,14 @@ export function Home() {
       <Card className="d-flex justify-content-center homestyle">
         
           <Link to="/calandar">
-            <Button onclick={Calandar} className="startBtn" variant="primary">
+            <Button onClick={Calandar} className="startBtn" variant="primary">
               Check The Calendar
             </Button>
           </Link>
   
       </Card>
 
-      <img src={Image} alt="Car Driving" Height="760" width="2000" />
+      <img src={Image} alt="Car Driving" height="760" width="2000" />
     </div>
   );
 }
