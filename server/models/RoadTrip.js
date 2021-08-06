@@ -10,8 +10,24 @@ const roadTripSchema = new Schema({
 
   waypoints: [
     {
-      type: Schema.Types.ObjectId,
-      ref: "WayPoints",
+      name: {
+        type: String,
+        required: true,
+        trim: true,
+      },
+      location: {
+        type: String,
+        required: true,
+        trim: true,
+      },
+      duration: {
+        type: Number,
+        required: false,
+      },
+      comments: {
+        type: String,
+        required: false,
+      },
     },
   ],
 });

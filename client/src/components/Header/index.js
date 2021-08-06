@@ -16,7 +16,7 @@ const Header = () => {
         <div>
           <Link className="text-dark" to="/">
             {/* <h1 className="m-0">RoadTripPin</h1> */}
-            <img src={RoadLogo} alt="Car Driving" Height="50" width="290"/>
+            <img src={RoadLogo} alt="Car Driving" height="50" width="290"/>
           </Link>
           <p className="m-0">Don't miss even one stop!</p>
         </div>

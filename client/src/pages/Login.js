@@ -62,7 +62,7 @@ const Login = (props) => {
                 </p>
               ) : (
                 <form onSubmit={handleFormSubmit}>
-                  <label for="email" class="form-label">
+                  <label htmlFor="email" className="form-label">
                     Email:
                   </label>
                   <input
@@ -73,7 +73,7 @@ const Login = (props) => {
                     value={formState.email}
                     onChange={handleChange}
                   />
-                  <label for="password-signup" class="form-label">
+                  <label htmlFor="password-signup" className="form-label">
                     Password:
                   </label>
                   <input

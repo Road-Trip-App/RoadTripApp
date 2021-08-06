@@ -5,37 +5,46 @@ const typeDefs = gql`
     _id: ID!
     username: String!
     email: String!
+    roadTrips: [RoadTrip]
   }
 
-  type Query {
-    user: User
+  type RoadTrip {
+    _id: ID
+    name: String
+    waypoints: [WayPoints]
   }
+
+  type WayPoints {
+    _id: ID
+    name: [String]
+    location: String
+    duration: String
+    comments: String
   
+  }
+
   type Auth {
     token: ID
     user: User
   }
 
+  type Query {
+    users: [User]
+    user: User
+    userByUsername(username: String!): User
+    roadTrip(roadTripId: ID!): RoadTrip
+
+  }
+  
+ 
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
-    updateUser(username: String!, email: String!, password: String!): User
+   # updateUser(username: String, email: String, password: String): User
     login(email: String!, password: String!): Auth
-    addWaypoint(RoadTrip: Waypoint!): User
-  
+    addRoadTrip(name: String!): RoadTrip
+    # addWaypoint(RoadTripId: ID!): RoadTrip
+    
   }
-
-  type RoadTrip {
-    origin: String!
-    destination: String!
-}
-
-  input Waypoint {
-    Name: [String]
-    location: String!
-    Duration: String
-    Comments: String
-    Completed: Boolean
-  
-}`;
+`;
 
 module.exports = typeDefs;
