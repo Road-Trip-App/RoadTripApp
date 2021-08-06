@@ -1,6 +1,6 @@
 import React from 'react';
-import Card from 'react-bootstrap-card';
-import Button from 'react-bootstrap-buttons';
+import Card from 'react-bootstrap/card';
+import Button from 'react-bootstrap/button';
 import "./NewTripBtn.css"
 import { Link } from 'react-router-dom';
 import NewTripForm  from '../NewTripForm/NewTripForm';
