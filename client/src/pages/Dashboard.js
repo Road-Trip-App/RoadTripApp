@@ -1,23 +1,14 @@
-import React from 'react';
-
-import NewTripBtn from '../components/NewTripBtn/NewTripBtn';
-
-// import NewPinBtn from '../components/NewPinBtn/NewPinBtn';
-import TripCard from '../components/TripCard/TripCard'
+import React from "react";
+import NewTripBtn from "../components/NewTripBtn/NewTripBtn";
+import TripCard from "../components/TripCard/TripCard";
 
 function Dashboard() {
-    return(
-        
+  return (
     <div>
-
-        <NewTripBtn />
-        
-        <TripCard />
-       
+      <NewTripBtn />
+      <TripCard />
     </div>
-
-
-    );
+  );
 }
 
 export default Dashboard;

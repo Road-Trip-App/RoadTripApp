@@ -8,7 +8,6 @@ import {
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 
-
 import Header from "./components/Header";
 // import NewTrip from "./components/TripCard/TripCard";
 import Footer from "./components/Footer";
@@ -17,7 +16,7 @@ import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import Signup from "./pages/Signup";
 import MapContainer from "./pages/MapContainer";
-import NewTripBtn from "./components/NewTripBtn/NewTripBtn";
+// import NewTripBtn from "./components/NewTripBtn/NewTripBtn";
 import NewTripForm from "./components/NewTripForm/NewTripForm";
 import WayPointForm from "./components/WaypointForm/WaypointForm";
 import PinCard from "./components/PinCard/PinCard";
@@ -58,7 +57,7 @@ function App() {
         {!Auth.loggedIn() ? (
           <>
             <Route exact path="/">
-              < Home/>
+              <Home />
             </Route>
             <Route exact path="/login">
               <Login />
@@ -77,15 +76,10 @@ function App() {
               <Login />
             </Route>
 
-            {/* <Route exact path="/">
-              <Home />
-            </Route> */}
-
             <Route exact path="/">
-            <Forecast />
-    
+              <Forecast />
+
               <Dashboard />
-            
             </Route>
 
             <Route exact path="/new-trip">
