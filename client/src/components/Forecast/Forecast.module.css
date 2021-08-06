@@ -1,11 +1,17 @@
-.TextInput {
-    font-size: large;
+h2 {
+    font-size: 20px;
+    color: white;
+}
+
+.textInput {
+    /* font-size: large; */
     border: 1px solid #EEEEEE;
     padding: 5px;
     border-radius: 3px;
-    display: block;
     margin: 5px auto;
+    justify-content: center;
 }
+
 .TextInput:focus {
     outline: none;
     border-color: #719ECE;
@@ -13,15 +19,21 @@
 }
 .Radio {
     font-size: small;
+    margin: 0 auto;
 }
 .Button {
     display: block;
-    margin: 10px auto;
+    margin: 0px auto;
     padding: .5rem;
     font-size: 1em;
     background: darkcyan;
-    border-radius: 5px;
+    border-radius: 55px;
     color: white;
     cursor: pointer;
-    margin: 5px auto;
+}
+
+.weatherform {
+    display: flex;
+    justify-items: center;
+    background-color: black;
 }

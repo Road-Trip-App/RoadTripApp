@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import RoadLogo from "../../assets/logo.png";
 
 import Auth from '../../utils/auth';
 import "./header.css"
@@ -14,7 +15,8 @@ const Header = () => {
       <div className="container flex-row justify-space-between-lg justify-center align-center d-flex justify-content-between">
         <div>
           <Link className="text-dark" to="/">
-            <h1 className="m-0">RoadTripPin</h1>
+            {/* <h1 className="m-0">RoadTripPin</h1> */}
+            <img src={RoadLogo} alt="Car Driving" Height="50" width="290"/>
           </Link>
           <p className="m-0">Don't miss even one stop!</p>
         </div>

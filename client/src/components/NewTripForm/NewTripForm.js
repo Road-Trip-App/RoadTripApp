@@ -7,26 +7,26 @@ const NewTripForm = () => {
   return (
     <div>
       <div className="NewTripForm">
-        <div className="newform-container">
-          <div className="input-group1">
-            <span className="input-group-text" id="inputGroup">
+        <div className="newform-container card">
+          <div className="input-group1 ">
+            <span className="input-group-text inpute" id="inputGroup">
               ORIGIN LOCATION
             </span>
             <input
               type="text"
-              className="form-control"
+              className="form-control inpute"
               aria-label="Sizing example input"
-              aria-describedby="inputGroup mb-3"
+              aria-describedby="inputGroup mb-2"
             />
           </div>
 
           <div className="input-group2">
-            <span className="input-group-text" id="inputGroup">
+            <span className="input-group-text inputetwo" id="inputGroup">
               DESTINATION
             </span>
             <input
               type="text"
-              className="form-control"
+              className="form-control inpute"
               aria-label="Sizing example input"
               aria-describedby="inputGroup mb-3"
             />
@@ -36,7 +36,7 @@ const NewTripForm = () => {
             <label className="input-group-text2" htmlfor="TILE PHOTO">
               TILE PHOTO
             </label>
-            <select className="form-select" name="tile-photo" id="tile-photo">
+            <select className="form-select inpute" name="tile-photo" id="tile-photo">
               <option selected>Choose file</option>
               <option value="photo1">Mountains</option>
               <option value="photo2">Lake</option>

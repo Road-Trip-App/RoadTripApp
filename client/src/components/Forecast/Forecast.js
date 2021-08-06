@@ -31,7 +31,7 @@ const Forecast = () => {
 
   return (
     <>
-      <div className="d-flex justify-content-center bg-info">
+      <div className="d-flex justify-content-center bg-info card">
         <h2>Find Current Weather Conditions</h2>
         <form onSubmit={getForecast}>
           <input 

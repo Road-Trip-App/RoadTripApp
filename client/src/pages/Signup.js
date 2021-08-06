@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
 
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
@@ -43,6 +44,7 @@ const Signup = () => {
   };
 
   return (
+    <Container>
     <main className="row login-signup">
       <div className="col">
         <div className="card" style={{ width: '18rem' }}>
@@ -103,8 +105,9 @@ const Signup = () => {
           </div>
           </div>
         </div>
-      </div>
+      </div> 
     </main>
+    </Container>
   );
 };
 
