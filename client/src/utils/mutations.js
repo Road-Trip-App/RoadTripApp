@@ -28,3 +28,36 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+// export const ADD_THOUGHT = gql`
+//   mutation addRoadTrip($name: String!) {
+//     addRoadTrip(name: $name) {
+//       _id
+//       name
+//       waypoints {
+//         _id
+//         name   
+//         location
+//         duration
+//         comments
+//       }
+//     }
+//   }
+// `;
+
+
+// export const ADD_WAYPOINT = gql`
+//   mutation addWayPoint($RoadTripId: ID!, $commentText: String!) {
+//     addComment(thoughtId: $RoadTripId, commentText: $commentText) {
+//       _id
+//       thoughtText
+//       thoughtAuthor
+//       createdAt
+//       comments {
+//         _id
+//         commentText
+//         createdAt
+//       }
+//     }
+//   }
+// `;

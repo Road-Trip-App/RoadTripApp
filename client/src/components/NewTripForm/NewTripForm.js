@@ -32,8 +32,8 @@ const NewTripForm = () => {
             />
           </div>
 
-          <div className="input-group3 mb-3">
-            <label className="input-group-text2" htmlfor="TILE PHOTO">
+          {/* <div className="input-group3 mb-3">
+            <label className="input-group-text2" htmlFor="TILE PHOTO">
               TILE PHOTO
             </label>
             <select className="form-select inpute" name="tile-photo" id="tile-photo">
@@ -45,7 +45,7 @@ const NewTripForm = () => {
               <option value="photo5">City</option>
               <option value="photo6">Village</option>
             </select>
-          </div>
+          </div> */}
 
           <div className="input-group mb-3">
             <Link to="/way-point">

@@ -36,10 +36,13 @@ const Login = (props) => {
       // if (data) {
       //   // we are redirecting (fingers crossed) to dashboard
       //   return history.push("/dashboard");
-      // }
     } catch (e) {
       console.error(e);
     }
+    if (data) {
+      console.log(data)
+    }
+   
 
     // clear form values
     setFormState({

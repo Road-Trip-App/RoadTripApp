@@ -78,7 +78,6 @@ function App() {
 
             <Route exact path="/">
               <Forecast />
-
               <Dashboard />
             </Route>
 

@@ -1,12 +1,12 @@
 import React from 'react';
-import Card from 'react-bootstrap-card';
-import Button from 'react-bootstrap-buttons';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 // import { Link } from 'react-router-dom';
 import'./PinCard.css'
 
 function PinCard() {
     return (
-        <>
+        
             <Card className="text-center card-style">
                 <Card.Header>CONDITIONALLY RENDERED PIN CARD</Card.Header>
                 <Card.Body>
@@ -22,7 +22,7 @@ function PinCard() {
                 </Card.Body>
                 {/* <Card.Footer className="text-muted">2 days ago</Card.Footer> */}
             </Card>
-        </>
+        
     );
 }
 

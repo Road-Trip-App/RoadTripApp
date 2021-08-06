@@ -1,25 +1,38 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User ,RoadTrip, WayPoints } = require("../models");
+const { User, RoadTrip, WayPoints } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
-    user: async (parent, args, context) => {
+    user: async (parent, { username }) => {
+      return User.findOne({ username }).populate("roadTrips");
+    },
+    // user: async (parent, args, context) => {
+    //   if (context.user) {
+    //     const user = await User.findById(context.user._id);
+    //   }
+
+    //   return user;
+    // },
+    me: async (parent, args, context) => {
+     // console.log(context);
       if (context.user) {
-        const user = await User.findById(context.user._id).populate('waypoints');
+        return await User.findOne({ _id: context.user_id }).populate(
+          "roadTrips"
+        );
       }
 
-      return user;
+      throw new AuthenticationError("You gotta login...");
     },
     roadTrip: async (parent, { roadTripId }) => {
       return RoadTrip.findOne({ _id: roadTripId });
     },
 
-    users: async () => {
-      return User.find();
-    },
-    userByUsername: async (parent, {username}) => {
-      return User.findOne({username: username}).populate("roadTrips");
+    // users: async () => {
+    //   return User.find();
+    // },
+    userByUsername: async (parent, { username }) => {
+      return User.findOne({ username: username }).populate("roadTrips");
     },
     // roadTrips: async (parent, { username }) => {
     //   const params = username ? { username } : {};
@@ -33,11 +46,10 @@ const resolvers = {
     //   return WayPoints.find(params).sort({ createdAt: -1 });
     // },
   },
-  
 
   Mutation: {
     addUser: async (parent, args) => {
-     // console.log('Hello')
+      // console.log('Hello')
       const user = await User.create(args);
       const token = signToken(user);
 
@@ -56,7 +68,7 @@ const resolvers = {
       const user = await User.findOne({ email });
 
       if (!user) {
-        throw new AuthenticationError('No user found with this email address');
+        throw new AuthenticationError("No user found with this email address");
       }
 
       const correctPw = await user.isCorrectPassword(password);
@@ -71,17 +83,16 @@ const resolvers = {
     },
 
     addRoadTrip: async (parent, { name }, context) => {
-    // if (context.user) {
-      //    console.log(context.user)
-          const updatedTripData = await RoadTrip.create({
-            name
-          });
-          return updatedTripData
-     // }
-      throw new AuthenticationError('Please Log in to save a trip')
-    
+      if (context.user) {
+        console.log(context.user);
+        const updatedTripData = await RoadTrip.create({
+          name,
+        });
+        return updatedTripData;
+      }
+      throw new AuthenticationError("Please Log in to save a trip");
     },
-  
+
     // addWayPoint: async (parent, { RoadTripId }, context) => {
     //     if (context.user) {
     //       return RoadTrip.findOneAndUpdate(
