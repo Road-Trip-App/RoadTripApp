@@ -50,10 +50,13 @@ tatyana.yarushin@gmail.com || LinkedIn @ Tatyana Yarushin || GitHub @ TatyanaYar
 `
 
 ## Additional Links: 
-
+Mock up:
 https://drive.google.com/file/d/1GzPn5NQ-d1GBu36lOQkJr3v1Yw0lPCxE/view?usp=sharing
 
-Working google doc
+Presentation:
+https://docs.google.com/presentation/d/1xQ4zkJ9YvEgHgh49qzppAaqED5mb2SRbTR6vEu1fhVk/edit?usp=sharing
+
+Working google doc:
 https://docs.google.com/document/d/1_ZS74Rq27_SiwUChJLzdaRNbvEbIBdkW8zaaUkRGeDc/edit?usp=sharing
 
 
