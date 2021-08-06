@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import {
   ApolloClient,
   InMemoryCache,
@@ -10,7 +10,7 @@ import { setContext } from "@apollo/client/link/context";
 
 
 import Header from "./components/Header";
-import NewTrip from "./components/TripCard/TripCard";
+// import NewTrip from "./components/TripCard/TripCard";
 import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
@@ -89,7 +89,7 @@ function App() {
             </Route>
 
             <Route exact path="/new-trip">
-              <NewTrip />
+              <TripCard />
             </Route>
 
             <Route exact path="/SingleTripView">

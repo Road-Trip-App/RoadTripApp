@@ -1,10 +1,10 @@
 import React from 'react';
-import Card from 'react-bootstrap/card';
-import Button from 'react-bootstrap/button';
+import Card from 'react-bootstrap-card';
+import Button from 'react-bootstrap-buttons';
 import { Link } from 'react-router-dom';
 import './TripCard.css'
 
-export function NewTrip() {
+function TripCard() {
   return (
     <>
       <Card className="text-center btnstyle">
@@ -64,4 +64,4 @@ export function NewTrip() {
   );
 }
 
-export default NewTrip;
+export default TripCard;

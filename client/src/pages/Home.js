@@ -6,7 +6,7 @@ import Card from "react-bootstrap/esm/CardHeader";
 import { Link } from "react-router-dom";
 import homestyle from  "./home.css"
 
-export function Home() {
+function Home() {
   return (
     <div className="homestyle">
       <p className="homestyle">

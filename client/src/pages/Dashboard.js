@@ -2,10 +2,10 @@ import React from 'react';
 
 import NewTripBtn from '../components/NewTripBtn/NewTripBtn';
 
-import NewPinBtn from '../components/NewPinBtn/NewPinBtn';
+// import NewPinBtn from '../components/NewPinBtn/NewPinBtn';
 import TripCard from '../components/TripCard/TripCard'
 
-export function Dashboard() {
+function Dashboard() {
     return(
         
     <div>

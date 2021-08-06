@@ -1,10 +1,10 @@
 import React from 'react';
-import Card from 'react-bootstrap/card';
-import Button from 'react-bootstrap/button';
-import { Link } from 'react-router-dom';
+import Card from 'react-bootstrap-card';
+import Button from 'react-bootstrap-buttons';
+// import { Link } from 'react-router-dom';
 import'./PinCard.css'
 
-export function PinCard() {
+function PinCard() {
     return (
         <>
             <Card className="text-center card-style">
