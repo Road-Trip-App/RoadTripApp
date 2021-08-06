@@ -1,6 +1,6 @@
 import React from 'react';
-import { useQuery } from '@apollo/client';
-import Auth from '../utils/auth';
+// import { useQuery } from '@apollo/client';
+// import Auth from '../utils/auth';
 
 import NewTripBtn from '../components/NewTripBtn/NewTripBtn';
 
@@ -27,9 +27,7 @@ function Dashboard() {
         <TripCard />
        
     </div>
-
-
-    );
+  );
 }
 
 export default Dashboard;

@@ -4,10 +4,11 @@ import Button from "react-bootstrap/button";
 import Calandar from "../components/Calandar/Calandar";
 import Card from "react-bootstrap/esm/CardHeader";
 import { Link } from "react-router-dom";
-import homestyle from  "./home.css"
+// import homestyle from  "./home.css"
 
 function Home() {
   return (
+    <>
     <div className="homestyle">
       <p className="homestyle">
         Welcome to RoadTripPin! Where you can store your pins to make sure you
@@ -25,6 +26,7 @@ function Home() {
 
       <img src={Image} alt="Car Driving" height="760" width="2000" />
     </div>
+    </>
   );
 }
 
