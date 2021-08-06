@@ -4,7 +4,7 @@ import Button from "react-bootstrap/button";
 import Calandar from "../components/Calandar/Calandar";
 import Card from "react-bootstrap/esm/CardHeader";
 import { Link } from "react-router-dom";
-// import homestyle from  "./home.css"
+import homestyle from  "./home.css"
 
 function Home() {
   return (
