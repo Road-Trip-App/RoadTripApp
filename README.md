@@ -28,7 +28,7 @@ As a user I need to be able add information about parking at my stop
 
 # Acceptance Criteria
 
-`
+```md
 Application uses React for the front end.
 
  Application has a GraphQL API with a Node.js and Express.js server, and uses queries and mutations for retrieving, adding, updating, and deleting data.
@@ -37,9 +37,32 @@ Application uses React for the front end.
 
  Application includes user authentication using JWT.
 
-`
+```
+
+## Screenshots
+
+Logo          | Home screen 
+:-------------------------:|:-------------------------:
+![screenshot_logo](https://user-images.githubusercontent.com/70031550/128609211-7a293df3-008d-4961-b409-29fbf8313f34.JPG)  |  ![screenshot_home](https://user-images.githubusercontent.com/70031550/128609233-194b562c-b124-4060-a73d-2cab9af4bd26.JPG)
+
+Signup screen           |  Login screen
+:-------------------------:|:-------------------------:
+![screenshot_SignUp](https://user-images.githubusercontent.com/70031550/128609297-8dc3b102-e0a1-4285-8426-383550f5f216.JPG)  |  ![screenshot_login](https://user-images.githubusercontent.com/70031550/128609455-5808d0be-d5a5-465b-a2a9-1ec385a335c3.JPG)
+
+Dashboard screen     | View screen 
+:-------------------------:|:-------------------------:
+![screenshot_dashboard](https://user-images.githubusercontent.com/70031550/128609252-f14aea9c-eaf5-4b15-8773-a5a96d799cc3.JPG)  |  ![screenshot_view](https://user-images.githubusercontent.com/70031550/128609311-c124570d-f184-4363-9d80-1a4da103840f.JPG)
+
+Start a new trip screen    | Add a Pin screen 
+:-------------------------:|:-------------------------:
+![screenshot_startNewTrip](https://user-images.githubusercontent.com/70031550/128609305-d9f173b8-e334-4450-9d36-b56f96851fab.JPG)  |  ![screenshot_addPin](https://user-images.githubusercontent.com/70031550/128609236-c64d150f-8cc0-4690-925f-7bb0fee9485a.JPG)
+
+Calendar screen    | Current Weather Conditions screen 
+:-------------------------:|:-------------------------:
+![screenshot_calendar](https://user-images.githubusercontent.com/70031550/128609242-300bd0c1-652b-437e-87f9-6863aca36cbf.JPG)  |  ![screenshot_current weather](https://user-images.githubusercontent.com/70031550/128609696-03b51c02-a881-4dbc-b723-4f1ef24dd115.JPG)
 
 # Authors
+**We hope you found something interesting!** :scroll:
 If you have any questions, please do not hesitate to reach out to any of the group members below at:
 `
 Alicia.Krolak4@gmail.com || LinkedIn @ Alicia Krolak || GitHub @ AliciaJK
@@ -58,5 +81,7 @@ https://docs.google.com/presentation/d/1xQ4zkJ9YvEgHgh49qzppAaqED5mb2SRbTR6vEu1f
 
 Working google doc:
 https://docs.google.com/document/d/1_ZS74Rq27_SiwUChJLzdaRNbvEbIBdkW8zaaUkRGeDc/edit?usp=sharing
+
+Heroku: https://serene-castle-18240.herokuapp.com/
 
 
